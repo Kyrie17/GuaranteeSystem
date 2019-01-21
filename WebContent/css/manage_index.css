@@ -1,0 +1,148 @@
+*{
+	padding: 0;
+	margin:0;
+}
+body{
+	font-family: 微软雅黑;
+	height: 100%;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.wrapper{
+	width: 100%;
+	height: auto;
+}
+.top_logo{
+	background: url(../imgs/manage_index.jpg) center top no-repeat;
+	height:280px;
+	min-width: 1106px;
+	background-size: 100% 100%;
+}
+.subnav{
+	position: relative;
+	top:240px;
+	width: 1000px;
+	height: 50px;
+	margin:auto;
+}
+.top_tit{
+	border-radius: 5px;
+	min-width: 1000px;
+	position: absolute;
+	padding:5px;
+	background-color: rgba(196,55,99,0.8);
+
+}
+.top_tit li{
+	line-height: 30px;
+	cursor: pointer;
+	float: left;
+	height: 30px;
+	margin-left: 40px;
+}
+.top_tit li a{
+	color: #fff;
+	font-size: 18px;
+
+}
+.layout_center{
+	position: relative;
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+    padding: 10px 0 74px 0;
+}
+.layout_center .left_bar{
+	width: 138px;
+	height: 40px;
+	border:1px solid #d8d8d8;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+	font-size: 13px;
+	display: inline;
+	cursor: pointer;
+}
+.layout_center .left_bar:hover{
+	background-color:#5c307d;
+	color: #fff;
+}
+.right_bar{
+	margin-left:160px;
+}
+.box_tit{
+	border-bottom: 1px solid #d0d0d0;
+	font-size: 18px;
+}
+.box_tit span{
+	border-bottom: 3px solid #5c307d;
+}
+.bm-1 ul{
+	width: 845px;
+	height: 700px;
+	display: block;
+}
+.bm-1 li{
+	position: relative;
+	float: left;
+	width: 230px;
+	height: 133px;
+	padding: 15px;
+	margin:10px 15px 5px 0;
+	border: 1px solid #EAEAEA;
+
+}
+.bm-1 li img{
+	position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.bm-1 li p{
+	margin: 0 0 0 120px;
+}
+.bm-1 li p span{
+	width: 100%;
+    line-height: 24px;
+    display: inline-block;
+}
+.footer{
+	position: relative;
+	height: 90px;
+	margin-top: 20px;
+	background-color: #3e2054;
+	padding-left: 80px;
+	padding-top: 30px;
+}
+.team_name{
+	display: block;
+}
+.team span{
+	color: #fff;
+}
+.workers span{
+	margin-top: 5px;
+}
+.file{
+	position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 38px;
+    font-size:18px;
+    color:#fff;
+}
+.file input{
+	position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor:pointer;
+
+}

@@ -1,0 +1,13 @@
+
+
+table.table-expandable.table-hover > tbody > tr:nth-child(even):hover td {
+    background-color: white;
+}
+
+table.table-expandable > tbody > tr div.table-expandable-arrow.up {
+    background-position:0px 0px;
+}
+.container{
+	width:682px;
+	padding-left: 0;
+}

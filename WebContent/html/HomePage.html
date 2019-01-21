@@ -1,0 +1,899 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="/GuaranteeSystem/scripts/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/sweetalert2.css">
+	<script type="text/javascript" src="/GuaranteeSystem/js/index.js"></script>
+	<script type="text/javascript" src="/GuaranteeSystem/scripts/jquery-1.9.0.js"></script>
+	<script type="text/javascript" src="/GuaranteeSystem/js/sweetalert.min.js"></script>
+	<script type="text/javascript" src="/GuaranteeSystem/js/judgeLoginState.js"></script>
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/iconfont2/iconfont.css">
+	<script src="/GuaranteeSystem/scripts/echarts.min.js"></script>
+	<script type="text/javascript" src="/GuaranteeSystem/js/chat1.js"></script>
+	<script language='javascript'  charset="utf-8" src='/GuaranteeSystem/js/studentchat.js'></script>	
+</head>
+<body>
+<div>
+	<div class="login">
+		<ul>
+			<a href="/GuaranteeSystem/html/Login.html" id="login"><li>登录</li></a>
+		</ul>
+	</div>
+	<div class="header" style="width: 100%;">
+		<div class="banner" style="width: 100%;">
+			<div class="show">
+				<div class="photo_show" id="photo_show">
+					<ul id="head_P">
+						<li><img src="/GuaranteeSystem/imgs/1.jpg" class="p"></li>
+						<li><img src="/GuaranteeSystem/imgs/2.jpg" class="p"></li>
+						<li><img src="/GuaranteeSystem/imgs/3.jpg" class="p"></li>
+					</ul>
+					<div class="banner_mag">
+						<div class="banner_magbox">
+							<div class="banner_boxhead">
+								<img src="/GuaranteeSystem/imgs/tit.png" style="width: 400px;height: 350px;position: relative;left: -20px;">
+							</div>
+						</div>
+					</div>
+					<div class="Transform">
+						<a href="javascript:void(0)" id="prev"><</a>
+						<a href="javascript:void(0)" id="next">></a>
+					</div>
+					<div class="focus_news">
+						<div class="index_news_tit">
+							<span style="color: #fff;font-size: 30px;">Service Query</span>
+						</div>
+						<div class="my_tit">
+							<span class="goto_repair" id="repair_btn" style="color: #fff; cursor: pointer;">我要报修</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="container_two">
+			<div class="siderbar">
+				<div class="person" id="person">
+					<div class="person_con" id="person_con">
+						<img src="/GuaranteeSystem/imgs/repair_per.jpg">
+						<div class="introduce" id="loginInform">
+							<div class="user"><span>已有账号？</span><a href="/GuaranteeSystem/html/Login.html">点我登录</a></div>
+							<div class="user"><span>首次使用？</span><a href="/GuaranteeSystem/html/Register.html">点我注册</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="repair">
+					<div class="eat_tit">
+						<i class="iconfont icon-tian"></i>
+						<span style="font-size: 24px;">宿舍小贴士</span>
+					</div>
+					<div class="eat001">
+						<div class="repair_top">
+							<ul>
+								<li style="float:left;" id="btn1">
+									<i class="iconfont icon-cesuo"></i>
+								</li>
+								<li><i class="iconfont icon-dengpao"></i></li>
+							</ul>
+						</div>
+						<div>
+							<span class="repair_word"><a href="">厕所</a></span>
+							<span class="repair_word"><a href="">灯泡</a></span>
+						</div>
+					</div>
+					<div class="eat002">
+						<div class="repair_top">
+							<ul>
+								<li><i class="iconfont icon-shuiguan" style="position:relative;top:15px;"></i></li>
+								<li><i class="iconfont icon-dengguan" style="font-size: 100px;position: relative;left: -18px;top:40px;"></i></li>
+							</ul>
+						</div>
+						<div >
+							<sapn class="repair_word"><a href="#">水管</a></sapn>
+							<span class="repair_word" style="position: relative;left:15px;"><a href="#">灯管</a></span>
+
+						</div>
+					</div>
+				</div>
+				<div class="live" id="market">
+					<div class="eat_tit">
+						<i class="iconfont icon-fangzi" style="color: #5c307d;font-size: 25px;"></i>
+						<span style="font-size: 24px;">五金小市场</span>
+					</div>
+					<div class="eat001">
+						<div class="live_top">
+							<ul>
+								<li style="float:left;" class="buy_produce" id="buy_produce1"><i class="iconfont icon-yijianhuasa"></i>
+								<li class="buy_produce" id="buy_produce2"><i class="iconfont icon-wujinmensuo"></i></li>
+							</ul>
+						</div>
+						<div>
+							<span class="live_word"><a href="">花洒</a></span>
+							<span class="live_word" style="position: relative;left:5px;"><a href="">门锁</a></span>
+						</div>
+					</div>
+					<div class="eat002">
+						<div class="live_top">
+							<ul>
+								<li class="buy_produce" id="buy_produce3"><i class="iconfont icon-wujin"></i></li>
+								<li class="buy_produce" id="buy_produce4"><i class="iconfont icon-shuiguan"></i></li>
+							</ul>
+						</div>
+						<div>
+							<span class="live_word"><a href="">水龙头</a></span>
+							<span class="live_word" style="position: relative;left:-13px;"><a href="">水管</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="annual">
+					<div class="summary_tit">
+						<i class="iconfont icon-tian" style="color: #5c307d;font-size: 25px;"></i>
+						<span style="font-size: 24px;">年度报修总结</span>
+					</div>
+					<!--大家的第一页-->
+					<div class="summary_con" style="" id="summary_con">
+						<div class="summary">
+							<span class="summary_con_word1">快来看看今年的</span>
+							<span class="import1">报修情况</span>
+							<span class="summary_con_word2">吧！</span>
+						</div>
+						<div class="next_pre">
+							<span id="pre_summary" class="pre_summary"><i class="iconfont icon-shangyiye"></i></span>
+							<span id="next_summary" class="next_summary"><i class="iconfont icon-xiayiye"></i></span>
+						</div>
+					</div>
+					<!--有保修的第二页-->
+					<div class="summary_con1" style="display:none; ;" id="summary_con1">
+						<div class="summary">
+							<span class="summary_con1_word1">今年的你，</span>
+							<span style="font-size: 20px;">提交了</span>
+							<span class="import1">4个</span>
+							<span style="font-size: 20px;">报修单 ，</span>
+							<span style="font-size: 20px;">超过</span>
+							<span class="import1">100%</span>
+							<span style="font-size: 20px;">的同学</span>
+						</div>
+						<div class="next_pre">
+							<span id="pre_summary1" class="pre_summary"><i class="iconfont icon-shangyiye"></i></span>
+							<span id="next_summary1" class="next_summary"><i class="iconfont icon-xiayiye"></i></span>
+						</div>
+					</div>
+					<!--无保修的第二页-->
+					<!--<div class="summary_con1" style="display: none;" id="summary_con1">
+						<div class="summary">
+							<span class="summary_con1_word1">今年的你，</span>
+							<span class="summary_con1_word2">宿舍风平浪静，水管没坏，花洒没漏，厕所没塞……超过</span>
+							<span class="import1">100%</span><span style="font-size: 20px;">的同学</span>
+						</div>
+						<div class="next_pre">
+							<span id="pre_summary1" class="pre_summary"><i class="iconfont icon-shangyiye"></i></span>
+							<span id="next_summary1" class="next_summary"><i class="iconfont icon-xiayiye"></i></span>
+						</div>
+					</div>-->
+					<!--有报修的第三页-->
+					<div class="summary_con2" style="display:none;" id="summary_con2">
+						<div class="summary">
+							<span class="summary_con2_word1">你所在的宿舍</span>
+							<span class="import1" id="">18A222</span>
+							<span style="font-size: 20px;">报修次数超过</span><span class="import1">100%</span><span  style="font-size: 20px;">的宿舍楼。</span>
+							<div>
+								<span class="import1">zxx</span><span style="font-size: 20px;">同学，你不是一个人在报修~</span>
+							</div>
+						</div>
+						<div class="next_pre">
+							<span id="pre_summary2" class="pre_summary"><i class="iconfont icon-shangyiye"></i></span>
+							<span id="next_summary2" class="next_summary"><i class="iconfont icon-xiayiye"></i></span>
+						</div>
+					</div>
+					<!--无报修的第三页-->
+					<!--<div class="summary_con2" style="display:none;" id="summary_con2">
+							<div class="summary">
+								<span class="summary_con2_word1">报修君祝您:</span>
+								<span class="summary_con2_word2">明年的宿舍</span>
+								<span class="summary_con2_word3">依旧和今年一样</span>
+								<span class="import1">没毛病~</span>
+							</div>
+						<div class="next_pre">
+							<span id="pre_summary2" class="pre_summary"><i class="iconfont icon-shangyiye"></i></span>
+							<span id="next_summary2" class="next_summary"><i class="iconfont icon-xiayiye"></i></span>
+						</div>
+					</div>-->
+					
+					<div class="summary_con3" style="display:none; ;" id="summary_con3">
+						<div class="summary">
+							<span style="font-size: 20px;">希望明年你的宿舍都要好好的，不需要再登录全员报修啦~</span>
+						</div>
+						<div class="next_pre">
+							<span id="pre_summary3" class="pre_summary"><i class="iconfont icon-shangyiye"></i></span>
+							<span id="next_summary3" class="next_summary"><i class="iconfont icon-xiayiye"></i></span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="main">
+				<div class="public_main">
+					<div class="main_tit">
+						<span class="main_tit_word">服务信息</span>
+						<span class="main_tit_word" style="color: #ccc;font-size: 20px;">/PUBLIC INFORMATION</span>
+						<span class="more"><a href="/GuaranteeSystem/html/MoreNoticeInform.html">查看更多</a></span>
+					</div>
+					<table cellpadding="0" cellspacing="0" width="780px">
+							<tbody class="con_tit">
+								<tr>
+									<th>文件名</th>
+									<th>上传日期</th>
+									<th>下载数</th>
+									<th>下载</th>
+								</tr>
+							</tbody>
+							<tbody class="repair_infor" id="Notice_Inform">
+
+							</tbody>
+						</table>
+					<div class="public_con" id="Notice_Inform">
+						
+					</div>
+				</div>
+				<div class="tit_img">
+					<img src="/GuaranteeSystem/imgs/sbanner002.jpg" style="width: 785px; margin-top: 10px;">
+				</div>
+				<div class="repair_main">
+					<div class="main_tit">
+						<span class="main_tit_word">报修信息</span>
+						<span class="main_tit_word" style="color: #ccc;font-size: 20px;">/REPAIR INFORMATION</span>
+						<span class="more"><a href="/GuaranteeSystem/html/repair.html">查看更多</a></span>
+						<span class="more"><a href="/GuaranteeSystem/html/Person.html">我的报修</a></span>
+					</div>
+					<div class="repair_con">
+						<table cellpadding="0" cellspacing="0" width="100%">
+							<tbody class="con_tit">
+								<tr>
+									<th>报修类别</th>
+									<th>报修内容</th>
+									<th>报修人</th>
+									<th>报修时间</th>
+									<th>受理状态</th>
+								</tr>
+							</tbody>
+							<tbody class="repair_infor" id="repair_infor"> 
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="data_main">
+					<div class="data_con">
+						<div class="main_tit">
+							<span class="main_tit_word">数据分析</span>
+							<span class="main_tit_word" style="color: #ccc;font-size: 20px;">/DATA ANALYSIS</span>
+						</div>
+						<span id="main" style="width: 350px;height:400px; " class="main"></span>
+						<span id="main1" style="width: 350px;height:400px;margin-left: 30px;" class="main"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="worker_box" title="点我找客服" id="custom">
+		<img src="/GuaranteeSystem/imgs/chat_people.png">
+	</div>
+	<div class="footer">
+		<div class="team">
+			<span class="system" style="font-size: 20px;">广金报修系统</span>
+			<span class="team_name">队名：全都是bug队&copy;2018</span>
+		</div>
+	</div> 
+	<div class="repair_bill" id="repair_bill" style="display:none;">
+		<div class="repair_need">
+			<div class="tab_con">
+				<div class="repair_tit">
+					<span class="tit">报修单</span>
+					<span id="close_btn" class="close_btn">X</span>
+				</div>
+				<div class="repair_con">
+					<form id="form" action="" method="post" enctype="multipart/form-data" autocomplete="off" onsubmit="return check(this)">
+						<input type="hidden" name="username" id="username" value="1">
+						<input type="hidden" name="phone" id="phone" value="1">
+						<input type="hidden" name="serAdd" id="serAdd" value="1">
+						<div class="type">
+							<span class="serType">报修类型</span>
+							<div style="display: inline;" class="select_Type">
+								<select class="select_Type_two" id="serType">
+									<option value="1">水</option>
+									<option value="2">木</option>
+									<option value="3">电</option>
+									<option value="4">其他</option>
+								</select>
+							</div>
+						</div>
+						<div class="time">
+							<span>可接受维修时间</span>
+							<input type="date" value="" min="2018-12-03" name="sertime" id="serTime" class="sertime" style="width: 135px;font-size: 16px;">
+							<div class="select_Time">
+								<select id="detailTime">
+									<option value="08:00-12:00">8:00~11:30</option>
+									<option value="14:00-18:00">14:00~18:00</option>
+								</select>
+							</div>
+						</div>
+						<div class="information">
+							<span style="display: block;height: 35px;">报修内容</span>
+							 <div class="wordCount" id="wordCount">
+    							<textarea cols="45" rows="3" id="serInform" class="serInform" name="serInform" onfocus="if(value=='请填写报修内容'){value=''}"onblur="if (value ==''){value='请填写报修内容'}">请填写报修内容</textarea>
+    							<span class="wordwrap"><var class="word">50</var><span style="font-size: 15px;margin-left: -5px;">/50</span></span>
+							</div>
+						</div>
+						
+						<div class="repiar_pic">
+							<div class="pic_tit">
+								<span style="margin-top:5px;">上传图片</span>
+							</div>
+							<div>
+							</div>
+							<div class="add_box">
+								<input type="file" id="fileChoosed" name="image" class="add_pic" style="padding: 0;" accept="image/*">
+								</div>
+								<!--放报修照片的地方-->
+							<div class="photo_con">
+								<canvas id="canvasFile" width="77px" height="77px"></canvas>
+							</div>
+						</div>
+						<div class="submit">
+							<input type="submit" name="button" value="提交报修" class="submit_repair" id="submit_repair">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--购物车信息-->
+	<!--购物车信息-->
+	<div id="produce_message">
+		<div class="buy" style="display:none;" id="buy1">
+			<div class="buy_commodity" id="buy_commodity">
+				<div class="buy_return" id="buy_return1"><i class="iconfont icon-fanhui"></i></div>
+				<div class="commodity_photo">
+					<img src="/GuaranteeSystem/imgs/huasa.jpg">
+				</div>
+				<div class="buy_message">
+					<div class="buy_scan"><span class="buy_name">【手持增压】淋浴花洒喷头</span></div>
+					<div class="buy_scan">
+						<span class="buy_price">价格:<span class="buy_price_right"><i class="iconfont icon-renminbi"></i><span style="font-size: 25px;margin-left: 4px;">8.0</span></span></span>
+					</div>
+					<div class="shopping">
+						<button type="button" onclick=SubmitCommidity(1,"8.0","【手持增压】淋浴花洒喷头")><i class="iconfont icon-jiarugouwuche"></i></button>
+					</div>
+				</div>
+				<div class="trange_btn">
+						<span id="next_buy1" class="next_buy"><i class="iconfont icon-xiayiye"></i></span>
+					</div>
+			</div>
+		</div>
+		<div class="buy" style="display:none;" id="buy2">
+			<div class="buy_commodity" id="buy_commodity">
+				<div class="buy_return" id="buy_return2"><i class="iconfont icon-fanhui"></i></div>
+				<div class="commodity_photo">
+					<img src="/GuaranteeSystem/imgs/suo.jpg">
+				</div>
+				<div class="buy_message">
+					<div class="buy_scan"><span class="buy_name">【通用型】【304不锈钢】球形门锁锁具</span></div>
+					<div class="buy_scan">
+						<span class="buy_price">价格:<span class="buy_price_right"><i class="iconfont icon-renminbi"></i><span style="font-size: 25px;margin-left: 4px;">15.0</span></span></span>
+					</div>
+					<div class="shopping">
+						<button type="button" onclick=SubmitCommidity(2,"15.0","【通用型】【304不锈钢】球形门锁锁具")><i class="iconfont icon-jiarugouwuche"></i></button>
+					</div>
+				</div>
+				<div class="trange_btn">
+						<span id="pre_buy2" class="pre_buy"><i class="iconfont icon-shangyiye"></i></span>
+						<span id="next_buy2" class="next_buy"><i class="iconfont icon-xiayiye"></i></span>
+				</div>
+			</div>
+		</div>
+		<div class="buy" style="display:none;" id="buy3">
+			<div class="buy_commodity" id="buy_commodity">
+				<div class="buy_return" id="buy_return3"><i class="iconfont icon-fanhui"></i></div>
+				<div class="commodity_photo">
+					<img src="/GuaranteeSystem/imgs/water.png">
+				</div>
+				<div class="buy_message">
+					<div class="buy_scan"><span class="buy_name">【全铜材质】4分单水龙头</span></div>
+					<div class="buy_scan">
+						<span class="buy_price">价格:<span class="buy_price_right"><i class="iconfont icon-renminbi"></i><span style="font-size: 25px;margin-left: 4px;">8.0</span></span></span>
+					</div>
+					<div class="shopping">
+							<button type="button" onclick=SubmitCommidity(3,"8.0","【全铜材质】4分单水龙头")><i class="iconfont icon-jiarugouwuche"></i></button>
+					</div>
+				</div>
+				<div class="trange_btn">
+						<span id="pre_buy3" class="pre_buy"><i class="iconfont icon-shangyiye"></i></span>
+						<span id="next_buy3" class="next_buy"><i class="iconfont icon-xiayiye"></i></span>
+				</div>
+			</div>
+		</div>
+		<div class="buy" style="display:none;" id="buy4">
+			<div class="buy_commodity" id="buy_commodity">
+				<div class="buy_return" id="buy_return4"><i class="iconfont icon-fanhui"></i></div>
+				<div class="commodity_photo">
+					<img src="/GuaranteeSystem/imgs/shuiguan.jpg">
+				</div>
+				<div class="buy_message">
+					<div class="buy_scan"><span class="buy_name">【不锈钢】【金属编织】冷热进水软管 20cm</span></div>
+					<div class="buy_scan">
+						<span class="buy_price">价格:<span class="buy_price_right"><i class="iconfont icon-renminbi"></i><span style="font-size: 25px;margin-left: 4px;">2.5</span></span></span>
+					</div>
+					<div class="shopping">
+						<button type="button" onclick=SubmitCommidity(4,"2.5","【不锈钢】【金属编织】冷热进水软管20cm")><i class="iconfont icon-jiarugouwuche"></i></button>
+					</div>
+				</div>
+				<div class="trange_btn">
+						<span id="pre_buy4" class="pre_buy"><i class="iconfont icon-shangyiye"></i></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+function SubmitCommidity(id,price,name) {
+	var commidity_name=name;
+	var commidity_id=id;
+	var commidity_price=price;
+	alert(name+id+price);
+	var url = "http://localhost:8080/GuaranteeSystem/PurchaseCommidityServlet";
+	var arg={
+			"commidity_name":commidity_name,
+			"commidity_id":commidity_id,
+			"commidity_price":commidity_price
+	}
+	$.post(url,arg,function(data){
+		alert(data.msg);
+		if(data.msg=="添加购物车成功"){
+			swal("提示", "添加购物车成功", "success");
+		}else{
+			swal("提示", "添加购物车失败", "warning");
+		}
+});
+}
+
+
+$(function(){
+    //得到当前时间
+	var date_now = new Date();
+	//得到当前年份
+	var year = date_now.getFullYear();
+	//得到当前月份
+	//注：
+	//  1：js中获取Date中的month时，会比当前月份少一个月，所以这里需要先加一
+	//  2: 判断当前月份是否小于10，如果小于，那么就在月份的前面加一个 '0' ， 如果大于，就显示当前月份
+	var month = date_now.getMonth()+1 < 10 ? "0"+(date_now.getMonth()+1) : (date_now.getMonth()+1);
+	//得到当前日子（多少号）
+	var date = date_now.getDate() < 10 ? "0"+date_now.getDate() : date_now.getDate();
+	//设置input标签的max属性
+	document.getElementById("serType").min = year+"-"+month+"-"+date;
+})
+</script>
+<script type="text/javascript">
+	var modal = document.getElementById('repair_bill');
+    // 打开弹窗的按钮对象
+    var btn = document.getElementById("repair_btn");
+    
+    // 获取 <span> 元素，用于关闭弹窗
+    var span = document.getElementById("close_btn");
+    btn.onclick = function() {
+    	var username=document.getElementById("username");
+        modal.style.display = "block";
+        var photo = document.getElementById("fileChoosed");
+        
+    	photo.onchange = function() {
+
+    		if (typeof FileReader != 'undefined') {
+    			var file = document.getElementById("fileChoosed").files[0];
+    			if ((file.type).indexOf("image/") == -1) {
+    				swal("提示", "上传内容应为图片!", "warning");
+    			}
+    		} else {
+    			var fileName = document.getElementById("fileChoosed").value;
+    			var suffixIndex = fileName.lastIndexOf(".");
+    			var suffix = fileName.substring(suffixIndex + 1).toUpperCase();
+    			if (suffix != "BMP" && suffix != "JPG" && suffix != "JPEG"
+    					&& suffix != "PNG" && suffix != "GIF") {
+    				swal("提示", "请上传图片（格式BMP、JPG、JPEG、PNG、GIF等）!", "error");
+    			}
+    		}
+    		
+    	}
+    }
+     
+    span.onclick = function() {
+        modal.style.display = "none";
+    }     
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+<script>
+    $(function(){
+
+        //先选出 textarea 和 统计字数 dom 节点
+        var wordCount = $("#wordCount"),
+                textArea = wordCount.find("textarea"),
+                word = wordCount.find(".word");
+        //调用
+        statInputNum(textArea,word);
+
+    });
+    /*
+     * 剩余字数统计
+     * 注意 最大字数只需要在放数字的节点哪里直接写好即可 如：<var class="word">200</var>
+     */
+    function statInputNum(textArea,numItem) {
+        var max = numItem.text(),
+                curLength;
+        textArea[0].setAttribute("maxlength", max);
+        curLength = textArea.val().length;
+        numItem.text(max - curLength);
+        textArea.on('input propertychange', function () {
+            var _value = $(this).val().replace(/\n/gi,"");
+            numItem.text(max - _value.length);
+        });
+    }
+</script>
+
+<script type="text/javascript">
+	var modal = document.getElementById('repair_bill');
+    // 打开弹窗的按钮对象
+    var btn = document.getElementById("repair_btn");
+    var btn1 = document.getElementById("btn1");
+    // 获取 <span> 元素，用于关闭弹窗
+    var span = document.getElementById("close_btn");
+    btn.onclick = function() {
+    	var url2 = "/GuaranteeSystem/JudgeFinishInformServlet";
+    	$.post(url2, function(data) {
+    		if(data.msg=="已完善个人信息"){
+
+       modal.style.display = "block";
+       
+       var url = "http://localhost:8080/GuaranteeSystem/JudgeLoginState";
+		var args = {
+		"token" : getCookie("cookie")
+	};
+	$.post(url, args, function(data) {
+				if(data.code=="1"){
+				var username=document.getElementById("username")
+				username.value=data.data;
+				}else{
+					//login_span.innerHTML="";
+					//var btn=document.getElementById("repair_btn");
+					btn.style.display="none";
+					//person_con.innerHTML="";
+				}
+			});
+    		}else{
+    			swal("提示", "请先完善个人信息", "warning");
+    		}
+    		});
+        var photo = document.getElementById("fileChoosed");
+    	photo.onchange = function() {
+    		if (typeof FileReader != 'undefined') {
+    			var file = document.getElementById("fileChoosed").files[0];
+    			if ((file.type).indexOf("image/") == -1) {
+    				swal("提示", "上传内容应为图片!", "warning");
+    			}
+    		} else {
+    			var fileName = document.getElementById("fileChoosed").value;
+    			var suffixIndex = fileName.lastIndexOf(".");
+    			var suffix = fileName.substring(suffixIndex + 1).toUpperCase();
+    			if (suffix != "BMP" && suffix != "JPG" && suffix != "JPEG"
+    					&& suffix != "PNG" && suffix != "GIF") {
+    				swal("提示", "请上传图片（格式BMP、JPG、JPEG、PNG、GIF等）!", "error");
+    			}
+    		}
+    		
+    	}
+    }
+     btn1.onclick=function(){
+    	 modal.style.display="block";
+     }
+    span.onclick = function() {
+        modal.style.display = "none";
+    }     
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<script type="text/javascript">
+$.ajax({
+    type: "post",
+    url: "/GuaranteeSystem/GetLastestNIServlet",
+    data: {"analyze" : 1},
+    dataType: "json",
+    success: function(data){	
+    	var str = "";
+		for(var k in data.data[1]){
+			str += "<tr><th align='center'>" + data.data[1][k].fileName + "</th>"
+			+ "<th>" + data.data[1][k].upLoadDate + "</th>"
+			+ "<th>" + data.data[1][k].downLoadNum + "</th>"
+			+ "<th> <a href='/GuaranteeSystem/LoadFileServlet?fileName="+data.data[1][k].fileName+"'><img src='/GuaranteeSystem/imgs/download.png' width='20' height='20'></a>"
+			+  "</th></tr>";
+		}
+		$("#Notice_Inform").html(str);
+				// 基于准备好的dom，初始化echarts实例
+				var myChart = echarts.init(document.getElementById('main'));
+				var myChart1 = echarts.init(document
+						.getElementById('main1'));
+				// 指定图表的配置项和数据
+				var option = {
+					// 标题
+					title : {
+						text : '报修类别',
+							x : 'center'
+					},
+					// 工具箱
+					toolbox : {
+						show : true,
+						feature : {
+							saveAsImage : {
+								show : true
+							}
+						}
+					},
+					tooltip : {
+						trigger : 'axis'
+					},
+					// 图例
+					legend : {
+						data : ['销量']
+					},
+					// x轴
+					xAxis : {
+						type : 'category',
+						data : ["水", "木", "电", "其他"]
+					},
+					yAxis : {},
+					// 数据
+					series : [{
+						name : '类别',
+						type : 'bar',
+						data : [data.data[0][0], data.data[0][1], data.data[0][2],
+								data.data[0][3]]
+					}]
+
+				};
+				// 指定图表的配置项和数据
+				var option1 = {
+					title : {
+						text : '审核状态饼图',
+						subtext : '学生',
+						x : 'center'
+					},
+					tooltip : {
+						trigger : 'item',
+						formatter : "{a} <br/>{b} : {c} ({d}%)"
+					},
+					legend : {
+						orient : 'vertical',
+						left : 'left',
+						data : ['未审核', '已审核', '已完成']
+					},
+					series : [{
+								name : '学生报修类别',
+								type : 'pie',
+								radius : '55%',
+								center : ['50%', '60%'],
+								data : [{
+											value : data.data[0][4],
+											name : '未审核'
+										}, {
+											value : data.data[0][5],
+											name : '已审核'
+										}, {
+											value : data.data[0][6],
+											name : '已完成'
+										}]
+							}]
+				};
+
+				// 使用刚指定的配置项和数据显示图表。
+				myChart.setOption(option);
+				myChart1.setOption(option1);
+   	 
+				var str = "";
+				for(var k in data.data[2]){
+					//将数据库中保存的报修类型参数，转换为文字
+					var serType = "";
+					switch(data.data[2][k].serType)
+					{
+					case 1:
+					  serType = "水";
+					  break;
+					case 2:
+					  serType = "木";
+					  break;
+					case 3:
+					  serType = "电";
+					  break;
+					case 4:
+					  serType = "其他";
+					  break;
+					}
+					//将数据库中保存的报修类型参数，转换为文字
+					var judgeState = "";
+					switch(data.data[2][k].judgeState)
+					{
+					case -1:
+					  judgeState = "未审核";
+					  break;
+					case 1:
+						judgeState = "已审核";
+					  break;
+					case 2:
+						judgeState = "已完成";
+					  break;
+					}
+					str += "<tr><th>" + serType + "</th>"
+					+ "<th>" + data.data[2][k].serInform + "</th>"
+					+ "<th>" + data.data[2][k].username + "</th>"
+					+ "<th>" + data.data[2][k].serTime + "</th>"
+					+ "<th>" + judgeState+ "</th></tr>";
+				}
+				$("#repair_infor").html(str);
+    }
+    
+    
+    
+    
+});
+</script>
+
+<script type="text/javascript">
+	var buy_produce1 = document.getElementById('buy_produce1');
+	 // 打开弹窗的按钮对象
+    var buy1 = document.getElementById("buy1");
+    var buy2 = document.getElementById("buy2");
+        // 获取 <span> 元素，用于关闭弹窗
+    var buy_return1 = document.getElementById("buy_return1");
+    var next_buy1 = document.getElementById("next_buy1");
+    buy_produce1.onclick = function() {
+        buy1.style.display = "block";
+    }    
+   //取消
+    buy_return1.onclick = function() {
+        buy1.style.display = "none";
+    }
+    next_buy1.onclick=function(){
+    	buy1.style.display="none";
+    	buy2.style.display="block";
+    }
+</script>
+<script type="text/javascript">
+	var buy_return2= document.getElementById("buy_return2");
+	var buy_produce2 = document.getElementById('buy_produce2');
+	var buy2 = document.getElementById("buy2");
+	var buy1 = document.getElementById("buy1");
+	var buy3 = document.getElementById("buy3");
+	var pre_buy2= document.getElementById("pre_buy2");
+	var next_buy2 = document.getElementById("next_buy2");
+	buy_produce2.onclick = function() {
+        buy2.style.display = "block";
+    }
+	buy_return2.onclick = function() {
+        buy2.style.display = "none";
+    } 
+    pre_buy2.onclick=function(){
+    	buy2.style.display="none";
+    	buy1.style.display="block";
+    }
+    next_buy2.onclick=function(){
+    	buy2.style.display="none";
+    	buy3.style.display="block";
+    }
+
+</script>
+<script type="text/javascript">
+	var buy3 = document.getElementById("buy3");
+	var buy2 = document.getElementById("buy2");
+	var buy4 = document.getElementById("buy4");
+	var buy_produce3 = document.getElementById('buy_produce3');
+	var buy_return3 = document.getElementById("buy_return3");
+	var next_buy3 = document.getElementById("next_buy3");
+	var pre_buy3= document.getElementById("pre_buy3");
+	buy_produce3.onclick = function() {
+        buy3.style.display = "block";
+    }
+	buy_return3.onclick = function() {
+        buy3.style.display = "none";
+    }
+    pre_buy3.onclick=function(){
+    	buy3.style.display="none";
+    	buy2.style.display="block";
+    }
+    next_buy3.onclick=function(){
+    	buy3.style.display="none";
+    	buy4.style.display="block";
+    }
+</script>
+<script type="text/javascript">
+	var buy4 = document.getElementById("buy4");
+	var buy3 = document.getElementById("buy3");
+	var buy_produce4 = document.getElementById('buy_produce4');
+	var buy_return4 = document.getElementById("buy_return4");
+	var next_buy4 = document.getElementById("next_buy4");
+	buy_produce4.onclick = function() {
+        buy4.style.display = "block";
+    }
+	buy_return4.onclick = function() {
+        buy4.style.display = "none";
+    } 
+    pre_buy4.onclick=function(){
+    	buy4.style.display="none";
+    	buy3.style.display="block";
+    }
+</script>
+<!--年度保修总结-->
+<script type="text/javascript">
+	var summary_con = document.getElementById("summary_con");
+	var summary_con1 = document.getElementById("summary_con1");
+	var pre_summary = document.getElementById("pre_summary");
+	var next_summary = document.getElementById('next_summary');
+	next_summary.onclick = function() {
+        summary_con1.style.display = "block";
+        summary_con.style.display="none";
+    }
+</script>
+<script type="text/javascript">
+	var summary_con2 = document.getElementById("summary_con2");
+	var summary_con = document.getElementById("summary_con");
+	var summary_con1 = document.getElementById("summary_con1");
+	var pre_summary1 = document.getElementById("pre_summary1");
+	var next_summary1 = document.getElementById('next_summary1');
+	pre_summary1.onclick = function() {
+        summary_con.style.display = "block";
+        summary_con1.style.display="none";
+    }
+	next_summary1.onclick = function() {
+        summary_con2.style.display = "block";
+        summary_con1.style.display="none";
+    }
+</script>
+<script type="text/javascript">
+	var summary_con2 = document.getElementById("summary_con2");
+	var summary_con1 = document.getElementById("summary_con1");
+	var summary_con3 = document.getElementById("summary_con3");
+	var pre_summary2 = document.getElementById("pre_summary2");
+	var next_summary2 = document.getElementById('next_summary2');
+	pre_summary2.onclick = function() {
+        summary_con1.style.display = "block";
+        summary_con2.style.display="none";
+    }
+	next_summary2.onclick = function() {
+        summary_con3.style.display = "block";
+        summary_con2.style.display="none";
+    }
+</script>
+<script type="text/javascript">
+	var summary_con2 = document.getElementById("summary_con2");
+	var summary_con3 = document.getElementById("summary_con3");
+	var pre_summary3 = document.getElementById("pre_summary3");
+	var next_summary3 = document.getElementById('next_summary3');
+	pre_summary3.onclick = function() {
+        summary_con2.style.display = "block";
+        summary_con3.style.display="none";
+    }
+</script>
+
+</body>
+</html>

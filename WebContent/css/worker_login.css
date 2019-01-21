@@ -1,0 +1,112 @@
+*{
+	padding:0;
+	margin:0;
+}
+.login_header{
+	background: url(../imgs/work_top.jpg) center top no-repeat;
+	height:300px;
+	min-width: 1100px;
+	background-size: 100% 100%;
+}
+.login_con{
+	width: 411px;
+	margin:40px auto;
+}
+/**/
+.login_username,.login_password{
+	position: relative;
+}
+.username,.password{
+	position: relative;
+	height: 50px;
+	border-radius: 3px;
+	width: 400px;
+	color: #333;
+	margin-bottom: 12px;
+	border:1px solid #000;
+	outline:none;
+	font-size: 20px;
+	padding-left: 10px;
+}
+.login_username img{
+	width: 28px;
+    height: 28px;
+    display: block;
+    position: absolute;
+ 	right: 6px;
+    top: 11px;
+    margin: 0;
+    padding: 0;
+}
+/**/
+.login_password img{
+	width: 28px;
+    height: 28px;
+    display:block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    right: 6px;
+    top: 11px;
+}
+.login_btn{
+	text-align: center;
+}
+.login_btn input{
+	width: 100%;
+    background: #5c307d;
+    border: none;
+    margin-top:-20px;
+    height: 54px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+}
+.footer{
+	position: relative;
+	height: 80px;
+	margin-top: 20px;
+	background-color: #3e2054;
+	padding-left: 80px;
+	padding-top: 30px;
+}
+.team_name{
+	display: block;
+}
+.team span{
+	color: #fff;
+}
+input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+input:focus:-moz-placeholder {
+	color: transparent;
+}
+
+input:focus::-moz-placeholder {
+	color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+	color: transparent;
+}
+.id_Wrong,.password_Wrong{
+	position: absolute;
+	white-space:nowrap;
+	width: auto;
+	z-index: 11;
+	line-height: 23px;
+	border-radius: 5px;
+	height: auto;
+	background-color: rgba(255,255,255,0.8);
+	font-size: 18px;
+	color: red;
+	top:10px;
+	left: 415px;
+}
+.login_input{
+	margin-bottom: 20px;
+}

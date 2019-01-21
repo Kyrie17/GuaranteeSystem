@@ -1,0 +1,147 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+
+	background:url(../imgs/bk.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size:100% 100%; 
+}
+form{
+	margin:0 auto;
+}
+.box{
+	position: relative;
+	background-color: rgba(177,171,171,0.5);
+	border-radius: 15px;
+	height: 450px;
+	text-align: center;
+	min-width: 300px;
+	border-top: none;
+	width: 345px;
+	border-bottom:20px;	
+	padding-top: 5px;
+	margin:0 auto;
+	font-family: 楷体;
+	margin-top: 95px;
+}
+.head-title {
+	font-weight: bold;
+	color: #fff;
+	font-size: 28px;
+	margin-bottom: 0px;
+}
+
+.iconfont{
+	/*display: inline-block;*/
+	font-weight: 50;
+	position: relative;
+	top:8px;
+}
+.stu_id,.phone,.password,.repeatPassword{
+	position: relative;
+	outline:none;
+	background-color:rgba(255,255,255,0.6);
+	font-size: 15px;
+	width: 250px;
+	padding:5px;
+	padding-left:10px;
+	border-radius: 20px;
+	height: 25px;
+    margin-top: 20px;
+    border:none;
+    color:#000;
+}
+.mess{
+	position: relative;
+	outline:none;
+	background-color:rgba(255,255,255,0.6);
+	font-size: 15px;
+	width: 160px;
+	padding:5px;
+	padding-left:10px;
+	border-radius: 20px;
+	height: 25px;
+    margin-top: 20px;
+    border:none;
+    color:#000;
+}
+.obtain{
+	border:none;
+	padding: 5px 0;
+    font-weight: 100;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    width: 80px;
+	height:35px;
+	cursor: pointer;
+	background-color:#5c307d;
+	border-radius: 5px;
+	}
+ 
+.user_form{
+	outline:none;
+	border:none;
+	margin-top: 25px;
+    padding: 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    width: 80%;
+	height:30px;
+	background-color:#5c307d;
+	border-radius: 15px;
+	margin-left: 7%;
+	margin-top: 10px;
+}
+.return_login{
+	text-decoration: none;
+	outline:none;
+	cursor: pointer;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: 20;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    width: 80%;
+	height:25%;
+	border:none;
+	margin-top:10px;
+	background-color:#5c307d;
+	border-radius: 15px;
+	margin-left: 6%;
+	margin-bottom: 20px;
+}
+.stu-Wrong,.phone-Wrong,.code-Wrong,.pass-Wrong,.repass-Wrong{
+	position: absolute;
+	white-space:nowrap;
+	width: auto;
+	line-height: 23px;
+	border-radius: 5px;
+	height: auto;
+	background-color: rgba(255,255,255,0.8);
+	margin-top: 25px;
+	margin-left: 24px;
+	font-size: 15px;
+	color: red;
+}
+input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+input:focus:-moz-placeholder {
+	color: transparent;
+}
+
+input:focus::-moz-placeholder {
+	color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+	color: transparent;
+}

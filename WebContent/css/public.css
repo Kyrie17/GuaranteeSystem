@@ -1,0 +1,134 @@
+*{
+	padding: 0;
+	margin:0;
+}
+body{
+	font-family: 微软雅黑；
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+.header{
+	background: url(../imgs/top2.jpg) center top no-repeat;
+	height:360px;
+	background-size: 100% 100%;
+}
+.top{
+	height: 150px;
+	background-color: rgba(255,255,255,0.7);
+}
+.theam{
+	color: #5c307d;
+	line-height: 150px;
+	font-size:36px;
+	padding-left: 20px;
+	position: relative;
+	float:left;
+}
+.top_tit{
+	padding-top: 65px;
+	min-width: 1000px;
+	position: absolute;
+	left:270px;
+	float: right;
+}
+.top_tit li{
+	cursor: pointer;
+	float: left;
+	height: 40px;
+	margin-right:120px;
+}
+.top_tit li a{
+	color: #000;
+	font-size: 20px;
+
+}
+.public_active{
+	border-bottom: 1px solid #5c307d;
+}
+.top_tit li a:hover{
+	color: #5c307d;
+}
+.top_tit li:hover{
+	border-bottom:1px solid #5c307d;
+}
+.main_con{
+	width: 1100px;
+	margin:20px auto 20px;
+}
+.main_tit{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.main_tit span{
+	font-size: 23px;
+}
+.contain .con_left{
+	width: 200px;
+	border:1px solid #d8d8d8;
+	text-align: center;
+	border-radius: 5px;
+	float: left;
+	margin-top:15px;
+	display: inline;
+}
+.con_left ul li{
+	border-top:1px solid #d8d8d8;
+	line-height: 35px;
+}
+.con_right{
+	position: relative;
+	top:15px;
+	left: 50px;
+	display: inline;
+	overflow: hidden;
+	width: 800px;
+}
+.repair_con {
+	border:1px solid #d8d8d8;
+	width: 800px;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+.con_tit{
+	height: 35px;
+	line-height: 33px;
+	background-color:#d8d8d8;
+}
+th{
+	font-weight:26;
+	overflow: hidden;
+}.repair_infor{
+	height: 30px;
+	line-height: 30px;
+}
+.main_sub_list{
+	height: 30px;
+	margin-left: 20px;
+}
+.main_sub_list a{
+	float: left;
+    margin: 0 5px;
+    width: 50px;
+    height: 30px;
+    margin-top:10px;
+    border: 1px solid #ebebeb;;
+    line-height: 30px;
+    background: #fff;
+    text-align: center;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+.main_sub_list a:hover{
+	color: #fff;
+	background-color: #5c307d
+}
+.main_sub_bottom{
+	font-size: 14px;
+}

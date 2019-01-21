@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#pingfen{
+    width: 135px;
+    margin: 40px auto;
+    height: 28px;
+}
+#pingfen li{
+    width: 27px;
+    float: left;
+    height: 28px;
+    cursor: pointer;
+    background: url("star.gif") no-repeat 0 0;
+    list-style: none;
+}

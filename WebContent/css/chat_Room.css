@@ -1,0 +1,120 @@
+*{
+	padding: 0;
+	margin:0;
+}
+body{
+	width: 100%;
+	height: 100%;
+}
+.chat_box{
+	position: relative;
+	margin: 30px auto;
+	width: 768px;
+	height: 593px;
+	border:35px solid #6b4588;
+
+}
+
+.chat_room_middle{
+	position: relative;
+	width: 240px;
+	height: 593px;
+	float: left;
+	display: inline;
+	background-color:#efe6f7;
+}
+.chat_room_right{
+	position: relative;
+	width: 528px;
+	float: left;
+	display: inline;
+	height: 593px;
+	background-color: 	#FCFCFC;
+}
+.chat_room_right textarea{
+	width:526px;
+	height: 130px;
+	border:none; 
+	outline: none;
+	background-color: transparent;
+	font-size: 18px;
+	resize:none;
+	padding-left: 5px;
+}
+
+.center-info{
+	width: 528px;
+	background-color: #fff;
+	height: 428px;
+	border-bottom:1px solid #ddd;
+	box-sizing: border-box;
+	clear:both;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+.ensure button{
+	float: right;
+	background-color: transparent;
+	color: #aaa;
+	border:1px solid #ddd;
+	margin-right: 5px;
+	outline: none;
+	cursor: pointer;
+	padding:3px 16px ;
+	font-size: 15px;
+	
+}
+.ensure button:hover{
+	background-color: #5c307d;
+	color: #fff;
+}
+.student{
+	height: 50px;
+	width: 280px;
+	line-height: 50px;
+	padding-left: 10px;
+	cursor: pointer;
+	border-bottom:1px solid #eee;
+
+}
+.student img{
+	position: relative;
+	top:10px;
+}
+.chat_room_middle .show{
+	background-color: #fff;
+}
+/*滚动条*/
+.chat_room_middle{
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 3px;     /*高宽分别对应横竖滚动条的尺寸*/
+            height: 4px;
+        }
+::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background:rgba(92,48,125,0.2);
+}
+::-webkit-scrollbar-track  {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(92,48,125,0.2);
+    border-radius: 0;
+    background: #f1f1f1;
+}
+
+.student button{
+	background-color: transparent;
+	border:none;
+	width: 50px;
+	margin-left:100px;
+	height: 50px;s
+	line-height: 50px;
+	color: #bbb;
+	cursor: pointer;
+}
+.student button:hover{
+	color: red;
+}

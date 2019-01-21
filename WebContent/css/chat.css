@@ -1,0 +1,136 @@
+@CHARSET "UTF-8";
+html{
+	height: 100%;
+}
+body{
+	margin: 0;
+	padding:0;
+	height: 100%;
+ 	overflow: hidden; 
+}
+.body-left{
+	float: left;	
+	color: white;
+}
+.body-right{
+	float: right;	
+}
+.body-left,.body-right{
+	background-color: #101010;
+	display:inline-block;
+	width:25%;
+	height: 100%;
+}
+.body-center{
+	height: 100%;
+	display:inline-block;
+	width: 50%;
+}
+.center-info{
+	height: 77%;
+	width:88%;
+	margin: 10px auto;
+	padding: 5px 20px;
+	border:1px #A9A9A9 dashed;
+	border-radius: 15px;
+	overflow: auto;
+	overflow-x:hidden;
+}
+.center-input{
+	display:block;
+	height: 10%;
+	width:88%;
+	margin: 0px auto;
+	padding: 5px 20px;
+	resize: none;
+	font-size: 20px;
+	border:1px #A9A9A9 dashed; 
+	border-bottom: none;
+	outline: none;
+	border-radius: 15px 15px 0 0; 
+	overflow-x:hidden;
+}
+.ensure{
+	height:4%;
+	width: 88%;
+	margin: 0px auto;
+	padding:2px 20px;
+	border: 1px #A9A9A9 dashed;
+	border-radius:  0 0 15px 15px; 
+	border-top:none;
+}
+.ensure button{
+	float: right;
+	background-color: #4eacfb;
+	border: none;
+	border-radius: 5px;
+	border-top:none;
+	width: 15%;
+    height: 25px;
+}
+.basicInfo{
+	clear: both;
+	max-width:80%;
+	/* width: 80%; */
+	margin:10px 0;
+}
+.basicInfo-left{
+	width: 80px;
+	height: 80px;
+}
+.basicInfo-left img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+}
+.basicInfo-right{
+	max-width:76%;
+	/* width:80%;  */
+	padding:2px 12px;
+}
+.username{
+	color: #8b8b8b;
+}
+.context{
+	max-width:99%;
+	padding:0 3px;
+	background-color:#cdd7e2;
+	margin-top: 5px;
+	border-radius: 5px;
+	word-wrap:break-word;
+	word-break:break- all;
+}
+.welcome{
+	clear:both;
+	text-align: center;
+}
+.body-right img{
+	width: 22%;
+	position:fixed; 
+	bottom:2%;
+	right: 2%;
+}
+.left-info{
+	padding: 15px 54px;
+}
+.memberInfo{
+	height: 50px;
+    line-height: 50px;
+}
+.userpic{
+	border-radius: 20px;
+    height: 50px;
+    float: left;
+}
+.userpic img{
+	width:50px;
+	height:50px;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+.exitroom{
+	margin-top: 12px;
+}
+.exitroom:HOVER {
+	color:red;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>广金报修系统</title>
+</head>
+<script language='javascript'  charset="utf-8" src='/GuaranteeSystem/ajax-lib/ajaxutils.js'></script>
+<script language='javascript'  charset="utf-8" src='/GuaranteeSystem/js/submitJudge.js'></script>
+<script language='javascript'  charset="utf-8" src='/GuaranteeSystem/js/register.js'></script>
+<script language='javascript'  charset="utf-8" src='/GuaranteeSystem/scripts/jquery-3.3.1.min.js'></script>
+<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/form.css">
+<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/sweetalert2.css">
+	<script type="text/javascript" src="/GuaranteeSystem/js/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/iconfont/iconfont.css">
+<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/frame.css">
+<body>
+	<div class="head-con">
+		<div class="box">
+			<h4>
+				<div class="head-title">
+					<span title="注册" class="form">用户注册</span>
+				</div>
+			</h4>
+			<form action=" /GuaranteeSystem/RegisterServlet" method="post" autocomplete="off" onsubmit=" return check()">
+				<div class="box-con">
+					<i class="iconfont icon-ren" style="font-size: 25px;"></i>
+				 	<input type="text" name="stu_id" id="stu_id" placeholder="学号" class="stu_id">
+				 	<span id="stu-Wrong" name="stu-Wrong" class="stu-Wrong"></span>
+				 </div>
+				 	<div>
+					<i class="iconfont icon-shouji1" style="font-size: 25px;"></i>
+					<input type="text" name="phone" id="phone" class="phone" placeholder="手机号码">
+					<span class="phone-Wrong" id="phone-Wrong"></span>
+				</div>
+				<div>
+					<i class="iconfont icon-yanzhengma" style="font-size: 25px;"></i>
+				 	<input type="text" name="mess" id="mess" class="mess" placeholder="请查收验证码">
+				 	<input type="button" class="obtain generate_code" value="获取验证码" onclick="SendMess(this);">
+				 	<span id="code-Wrong" class="code-Wrong" name="code-Wrrong"></span>
+				 </div>
+				 <div>
+					<i class="iconfont icon-mima" style="font-size: 25px;"></i>
+					<input type="password" name="password" id="password" placeholder="请输入密码" class="password">
+					<span id="pass-Wrong" class="pass-Wrong" name="pass-Wrong"></span>
+				</div>
+				<div>
+				 	<i class="iconfont icon-mima" style="font-size: 25px;"></i>
+				 	<input type="password" name="repeatPassword" id="repeatPassword" placeholder="请再次输入密码" class="repeatPassword">
+				 	<span id="repass-Wrong" class="repass-Wrong" name="repass-Wrong"></span>
+				</div>
+				<div>
+					<input type="hidden" value="1" name="submit">
+					<input type="submit" name="button" value="确认注册" class="user_form" id="user_form"><input type="hidden" value="1" name="submit" id="submit">
+					<a href="/GuaranteeSystem/html/Login.html" style="text-decoration: none;"><input type="button" name="button" value="已有账号，返回登录" class="return_login"></a>
+					
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="success" id="success" style="display: none;">
+		<div class="success_ys">
+			<img src="/GuaranteeSystem/imgs/form.jpg" class="pic">
+			<span class="close_btn" id="close_btn"><img src="/GuaranteeSystem/imgs/close.png" style="width: 50px;height: 50px;" id="img"></span>
+				<div class="test">
+					<span id="write"></span>
+				    <em class="bot"></em>
+				    <em class="top"></em>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

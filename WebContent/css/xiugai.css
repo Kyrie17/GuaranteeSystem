@@ -1,0 +1,190 @@
+
+.select_Reset{
+	position: fixed;
+	z-index: 1009;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	color: #5c307d;
+	font-weight: bold;
+	background-color: 	rgba(255,239,213,0.5);
+}
+.select_con{
+	width: 550px;
+	padding: 13px;
+	height: 300px;
+	background-color: #fff;
+	border-radius: 20px;
+	margin: 50px auto;
+	border:1px solid #5c307d;
+}
+#close_btn{
+	padding: 5px;
+	font-size: 20px;
+	border-left: :1px solid rgba(92,48,175,0.5);
+	float: right;
+	cursor: pointer;
+}
+.select_img{
+	margin-top:60px;
+}
+.select_img img{
+	width: 230px;
+	height: 250px;
+	cursor: pointer;
+	margin-left: 30px;
+}
+.change_person{
+	position: fixed;
+	z-index: 1009;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	font-weight: bold;
+	background-color: 	rgba(255,239,213,0.5);
+}
+.top_tit{
+	width: 550px;
+	padding: 13px;
+	height: 300px;
+	border:1px solid #5c307d;
+	background-color: #fff;
+	border-radius: 20px;
+	margin: 50px auto;
+}
+#close_btn1{
+	padding: 5px;
+	font-size: 20px;
+	border-left: :1px solid rgba(92,48,175,0.5);
+	float: right;
+	cursor: pointer;
+}
+.tit{
+	line-height: 35px;
+	font-size: 20px;
+}
+.chane_tit{
+	text-align: center;
+	background-color: #fff;	
+}
+.tab_top{
+	margin-top: 10px;
+	background-color: #fff;
+}
+.tab_top span{
+	font-size:18px;
+	width: 100px;
+	height: 35px;
+}
+.first_con{
+	padding-left: 100px;
+	margin-top: 20px;
+}
+.stu_id{
+	outline:none;
+	font-size: 15px;
+	width: 200px;
+	padding:5px;
+	padding-left:10px;
+	border-radius: 5px;
+	height: 20px; 
+	border:1px solid #000;
+    margin-top: 20px;
+    color:#000;
+}
+.use_sex,.living{
+	margin-top:20px;
+}
+.area,.build{
+	outline: none;
+	width: 80px;
+	height: 25px;
+	font-size: 15px;
+	border-radius: 3px;
+	padding-left: 10px;
+	border:1px solid #000;
+}
+.build{
+	margin-left: 10px;
+	position: relative;
+	top:-1px;
+	padding-left: 14px;
+	font-size: 17px;
+}
+.room{
+	outline: none;
+	width: 80px;
+	height: 24px;
+	font-size: 15px;
+	border-radius: 3px;
+	padding-left: 10px;
+	margin-left: 10px;
+	border:1px solid #000;
+}
+.Person_submit{
+	outline:none;
+    padding: 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    width: 200px;
+	height:40px;
+	line-height: 28px;
+	border:none;
+	margin-top:20px;
+	background-color:#5c307d;
+	border-radius: 10px;
+	margin-left: 75px;
+	margin-bottom: 30px;
+}
+.change_Code{
+	position: fixed;
+	z-index: 1009;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	font-weight: bold;
+	background-color: 	rgba(255,239,213,0.5);
+}
+#close_btn2{
+	padding: 5px;
+	font-size: 20px;
+	border-left: :1px solid rgba(92,48,175,0.5);
+	float: right;
+	cursor: pointer;
+}
+/*设置输入框*/
+.old_password,.new_password,.repeatPassword{
+	outline:none;
+	font-size: 15px;
+	width: 200px;
+	padding:5px;
+	padding-left:10px;
+	border-radius: 5px;
+	height: 20px; 
+	border:1px solid #000;
+    margin-top: 20px;
+    color:#000;
+}
+.old,.new{
+	margin-left: 50px;
+}
+.password_submit{
+	outline:none;
+    padding: 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    width: 200px;
+	height:40px;
+	line-height: 28px;
+	border:none;
+	margin-top:20px;
+	background-color:#5c307d;
+	border-radius: 10px;
+	margin-left: 95px;
+	margin-bottom: 30px;
+}

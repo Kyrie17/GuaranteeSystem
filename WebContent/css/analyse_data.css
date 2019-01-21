@@ -1,0 +1,169 @@
+*{
+	padding: 0;
+	margin:0;
+}
+body{
+	font-family: 微软雅黑;
+	height: 100%;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.wrapper{
+	width: 100%;
+	height: auto;
+}
+.top_logo{
+	background: url(../imgs/manage_index.jpg) center top no-repeat;
+	height:280px;
+	min-width: 1106px;
+	background-size: 100% 100%;
+}
+.subnav{
+	position: relative;
+	top:240px;
+	width: 1000px;
+	height: 50px;
+	margin:  auto;
+	left: 
+}
+.top_tit{
+	border-radius: 5px;
+	min-width: 1000px;
+	position: absolute;
+	padding:5px;
+	background-color: rgba(196,55,99,0.8);
+
+}
+.top_tit li{
+	line-height: 30px;
+	cursor: pointer;
+	float: left;
+	height: 30px;
+	margin-left: 40px;
+}
+.top_tit li a{
+	color: #fff;
+	font-size: 18px;
+}
+.layout_center{
+	position: relative;
+	width: 1000px;
+	height: 50px;
+	margin:auto;
+}
+.box{
+	margin:0;
+	padding:0;
+}
+
+.box_tit{
+	position: relative;
+	margin-bottom: 0px;
+	height: 43px;
+	border-bottom: 1px solid #d0d0d0;
+}
+.box_tit span{
+	display: inline-block;
+	font-size: 18px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 3px solid #5c307d;
+}
+
+.left_filter,.right_filter{
+	display: inline-block;
+}
+.left_filter{
+	height: 30px;
+	position: relative;
+	top:-13px;
+	width: 110px;
+	padding-left: 50px;
+	background-color: #f0f0f0;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 30px;
+}
+.right_filter{
+	font-size: 15px;
+} 
+.right_filter{
+	margin-left: -3px;
+}
+.right_filter ul li button{
+	cursor:pointer;
+}
+.right_filter ul{
+	width: 838px;
+	height: 30px;
+	background-color: #f0f0f0;
+
+}
+.tit {
+	padding:2px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.show span button{
+	color: #fff;
+	border-radius: 5px;
+	padding:5px;
+	position: relative;
+	top:-5px;
+	background-color: #5c307d;
+}
+button{
+	background-color:transparent;
+	outline: none;
+	margin: 0;
+	padding: 0;
+	border: 1px solid transparent;  //自定义边框
+	
+}
+.right_filter li{
+	width: 145px;
+	text-align: center;
+	height: 26px;
+	padding-top:5px;
+}
+a{
+	color: #000;
+}
+li{
+	list-style: none;
+	float: left;
+}
+.show_in{
+	width: 957px;
+	padding:20px 20px 0 20px;
+	height: 400px;
+	border:1px solid #d0d0d0;
+	margin-top:-20px;
+	margin-bottom: 20px;
+	border-top: none;
+}
+.file{
+	position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 38px;
+    font-size:18px;
+    color:#fff;
+}
+.file input{
+	position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor:pointer;
+
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>公告栏</title>
+<link rel="stylesheet" type="text/css"
+	href="/GuaranteeSystem/css/public.css">
+<script type="text/javascript" src="/GuaranteeSystem/scripts/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="/GuaranteeSystem/js/NoticeInform.js"></script>
+	<script type="text/javascript" src="/GuaranteeSystem/js/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/sweetalert2.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="top">
+				<h1 class="theam">全员报修</h1>
+				<div class="subnav">
+					<ul class="top_tit">
+						<li><a href="/GuaranteeSystem/html/HomePage.html">首页</a></li>
+						<li><a href="">维修保修</a></li>
+						<li class="public_active"><a href="" style="color: #5c307d;">服务信息</a></li>
+						<li><a href="">吃在广金</a></li>
+						<li><a href="">住在广金</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="main_con">
+			<div class="main_tit">
+				<span class="main_tit_word">文件下载</span> <span class="main_tit_word"
+					style="color: #ccc; font-size: 20px;">/PUBLIC INFORMATION</span>
+			</div>
+			<div class="contain">
+				<div class="con_left">
+					<ul>
+						<li>下载</li>
+					</ul>
+				</div>
+				<div class="con_right">
+					<div class="repair_con">
+						<table cellpadding="0" cellspacing="0" width="800px">
+							<tbody class="con_tit">
+								<tr>
+									<th>文件名</th>
+									<th>上传日期</th>
+									<th>下载数</th>
+									<th>下载</th>
+								</tr>
+							</tbody>
+							<tbody class="repair_infor" id="content">
+							</tbody>
+						</table>
+						<div class="main_sub_list">
+							<a href="#" onclick="firstPage();">首页</a>&nbsp;&nbsp; <a href="#"
+								onclick="nextPage();">下一页</a>&nbsp;&nbsp; <a href="#"
+								onclick="previousPage();">上一页</a>&nbsp;&nbsp; <a href="#"
+								onclick="lastPage();">尾页</a>
+						</div>
+						<p class="main_sub_bottom" style="text-align: center;">
+							当前为<span id="currentPage"></span>页，共 <span id="totalPage"></span>页
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

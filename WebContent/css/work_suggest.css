@@ -1,0 +1,139 @@
+*{
+	margin:0;
+	padding:0;
+}
+.work_con{
+	width: 100%;
+	height: auto;
+}
+.con_top{
+	height: 250px;
+	min-width: 1106px;
+	background: url(../imgs/work_top2.jpg) center top no-repeat;
+	background-size: 100% 100%;
+}
+li{
+	list-style: none;
+}
+.work_main{
+	width: 950px;
+	margin:auto;
+	position: relative;
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
+.work_left{
+	width: 138px;
+	margin-top:25px;
+	display: inline;
+	position: relative;
+	float: left;
+}
+.work_main_left{
+	width: 130px;
+	
+}
+.work_main_left li{
+	text-align: center;
+	padding:7px 10px;
+	border:1px solid #000;
+	cursor: pointer;
+	font-size: 15px;
+	margin-top:2px;
+}
+.work_main_left li:hover{
+	background-color: #5c307d;
+	color: #fff;
+
+}
+.show{
+	background-color: #5c307d;
+	color: #fff;
+} 
+.work_right{
+	position: relative;
+	display: inline;
+	float: left;
+	width: 682px;
+	margin-left: 80px;
+
+}
+.work_right_top{
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	border-bottom:1px solid #eee;
+}
+.work_right_top .grade{
+	font-size: 65px;
+	color:	#FF6000; 
+	line-height: 100px;
+}
+.stu_start{
+	display: inline-block;
+	height: 60px;
+	position: relative;
+	margin-left: 30px;
+	text-align: center;
+	top:-30px;
+}
+.grade_tit{
+	font-size: 18px;
+	color:#aaa;
+	line-height: 40px;
+	height: 40px;
+}
+
+.xingxing_tit li{
+	float: left;
+}
+.xingxing_tit li img{
+	width:24px;
+	height: 24px;
+}
+.work_right_main{
+	padding:15px 5px;
+	border-top:none;
+
+}
+.stu_advice_box{
+	margin-top:20px;
+	border-bottom: 1px solid #eee;
+}
+/*头像*/
+.stu_advice_box .stu_top{
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	background-position: 100% 100%;
+}
+.stu_use{
+	display: inline-block;
+	position: relative;
+	top:-35px;
+	margin-left: 10px;
+	text-align: center;
+}
+.stu_use .stuName{
+	font-size: 20px;
+	font-weight: normal;
+	width: 80px;
+	height: 50px;
+	color:#0A0A0A;
+	line-height: 40px;
+}
+.repair_data{
+	color: #bbb;
+	float: right;
+}
+.suggest {
+	position: relative;
+	top:-20px;
+	padding-left: 80px;
+}
+.suggest .suggest_con{
+	color:#0A0A0A;
+	font-size: 20px;
+}

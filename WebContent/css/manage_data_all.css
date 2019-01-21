@@ -1,0 +1,199 @@
+*{
+	padding: 0;
+	margin:0;
+}
+body{
+	font-family: 微软雅黑;
+	height: 100%;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.wrapper{
+	width: 100%;
+	height: auto;
+}
+.top_logo{
+	background: url(../imgs/manage_index.jpg) center top no-repeat;
+	height:280px;
+	min-width: 1106px;
+	background-size: 100% 100%;
+}
+.subnav{
+	position: relative;
+	top:240px;
+	width: 1000px;
+	height: 50px;
+	margin:auto;
+}
+.top_tit{
+	border-radius: 5px;
+	min-width: 1000px;
+	position: absolute;
+	padding:5px;
+	background-color: rgba(196,55,99,0.8);
+
+}
+.top_tit li{
+	line-height: 30px;
+	cursor: pointer;
+	float: left;
+	height: 30px;
+	margin-left: 40px;
+}
+.top_tit li a{
+	color: #fff;
+	font-size: 18px;
+
+}
+.main_tit{
+	width: 1100px;
+	margin:20px auto 20px;
+	line-height: 50px;
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+}
+.main_tit span{
+	font-size:25px;
+}
+.inquiry_data{
+	width: 1100px;
+	margin:20px auto 20px;
+}
+.inquiry_data span{
+	margin-left: 30px;
+	font-size: 18px;
+}
+.inquiry_data input{
+	height: 20px;
+	line-height: 20px;
+	padding:3px;
+	outline: none;
+}
+select{
+	height: 28px;
+	width: 100px;
+	line-height: 28px;
+	font-size: 16px;
+}
+select option{
+	padding:5px;
+}
+
+.repair_main{
+	width: 1100px;
+	margin:20px auto 25px;
+	margin-top: 10px;
+	height: auto;
+	border:1px solid #d8d8d8;
+	border-radius: 5px;
+}
+.repair_tit{
+	padding: 10px;
+	height: 30px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.repair_tit span{
+	line-height: 30px;
+}
+.main_tit_word{
+	font-size: 23px;
+}
+.more a{
+	height: 20px;
+	line-height: 20px;
+	border:1px solid #5c307d;
+	color: #5c307d;
+	border-radius: 2px;
+	padding: 4px;
+	font-size: 15px;
+	float: right;
+	margin-left: 8px;
+}
+.con_tit{
+	width: 100%;
+}
+.con_tit th{
+	line-height: 36px;
+	color:#808080;
+	font-size: 15px; 
+	font-weight: normal;
+	border-bottom: 1px solid #d8d8d8;
+}
+.repair_infor tr{
+	width: 100%;
+}
+.repair_infor th{
+	line-height: 36px;
+	font-size: 18px;
+	font-weight: normal;
+	border-bottom: 1px solid #d8d8d8;
+}
+.repair_infor a{
+	color: #000;
+}
+.repair_infor a:hover{
+	color: #5c307d;
+	border-bottom: 1px solid #5c307d;
+}
+.main_sub_list{
+	height: 30px;
+	margin-left: 20px;
+}
+.main_sub_list a{
+	float: left;
+    margin: 0 5px;
+    width: 50px;
+    height: 30px;
+    margin-top:10px;
+    border: 1px solid #ebebeb;;
+    line-height: 30px;
+    background: #fff;
+    text-align: center;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+.main_sub_list a:hover{
+	color: #fff;
+	background-color: #5c307d
+}
+.main_sub_bottom{
+	font-size: 14px;
+}
+.footer{
+	position: relative;
+	height: 90px;
+	margin-top: 20px;
+	background-color: #3e2054;
+	padding-left: 80px;
+	padding-top: 30px;
+}
+.team_name{
+	display: block;
+}
+.team span{
+	color: #fff;
+}
+.file{
+	position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 38px;
+    font-size:18px;
+    color:#fff;
+}
+.file input{
+	position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor:pointer;
+
+}

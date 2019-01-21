@@ -1,0 +1,111 @@
+.open_repair{
+	position: fixed;
+	z-index: 1009;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	color: #5c307d;
+	font-weight: bold;
+	background-color: 	rgba(255,239,213,0.5);
+}
+.repair_box{
+	width: 705px;
+	padding: 13px;
+	height:602px;
+	background-color: #fff;
+	border-radius: 20px;
+	margin: 50px auto;
+}
+.repair_First{
+	width: 100%;
+	padding:10px;
+	margin:20px auto 25px;
+	margin-top: 10px;
+	height: auto;
+	border:1px solid #d8d8d8;
+	border-radius: 5px;
+
+}
+.repair_middle button{
+	margin: 0;
+	padding: 0;
+	border: 1px solid transparent; 
+	outline: none;
+	color:#fff;
+	cursor: pointer;
+	background-color:transparent;
+}
+.repair_tit{
+	padding: 10px;
+	height: 30px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.repair_tit span{
+	line-height: 30px;
+}
+.main_tit_word{
+	font-size: 23px;
+}
+.repair_middle table{
+	margin-bottom: 20px;
+}
+/*保修单样式*/
+.repair_middle table{
+	border: 1px solid #e0e0e0;
+    margin-top: 20px;
+    width: 690px;
+}
+.headline{
+	position: relative;
+	height: 36px;
+    line-height: 35px;
+    padding: 3px 5px;
+    color:#7027a7;
+    background:#f7f7f7;
+}
+.title{
+	text-align: right;
+	background-color: #f7f7f7;
+	padding-right: 5px;
+}
+.mytable{
+	border-collapse: collapse;
+}
+.mytable tr{
+	height: 35px;
+	line-height: 35px;
+}
+
+.mytable td{
+	padding:3px 9px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+.judge_tit{
+	padding:10px;
+	font-size: 25px;
+	padding-left: 80px;
+}
+th{
+	font-weight: normal;
+}
+.judge_con tr{
+	line-height: 30px;
+}
+.repair_middle ul{
+	position: absolute;
+	left: 580px;
+	z-index: 11;
+	margin-top: 5px;
+}
+.repair_middle ul li{
+	text-align: center;
+	background-color:#5c307d;
+	line-height: 33px;
+	width: 100px;
+	height: 33px;
+	margin-left: 10px;
+	border-radius: 10px;
+	color: #fff;
+}

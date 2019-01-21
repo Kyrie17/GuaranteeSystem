@@ -1,0 +1,187 @@
+*{
+	padding: 0;
+	margin:0;
+}
+body{
+	font-family: 微软雅黑;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.wrap{
+}
+.header{
+	background: url(../imgs/top2.jpg) center top no-repeat;
+	height:330px;
+	background-size: 100% 100%;
+}
+.top{
+	height: 130px;
+	background-color: rgba(255,255,255,0.7);
+}
+.theam{
+	color: #5c307d;
+	line-height: 150px;
+	font-size:36px;
+	padding-left: 20px;
+	position: relative;
+	float:left;
+}
+.top_tit{
+	padding-top: 65px;
+	min-width: 1000px;
+	position: absolute;
+	left:270px;
+	float: right;
+}
+.top_tit li{
+	cursor: pointer;
+	float: left;
+	height: 40px;
+	margin-right:120px;
+}
+.top_tit li a{
+	color: #000;
+	font-size: 20px;
+
+}
+.repair_inner{
+	border-bottom: 1px solid #5c307d;
+}
+.top_tit li a:hover{
+	color: #5c307d;
+}
+.top_tit li:hover{
+	border-bottom:1px solid #5c307d;
+}
+.main_tit{
+	width: 1100px;
+	margin:20px auto 20px;
+	line-height: 50px;
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+}
+.main_tit span{
+	font-size:25px;
+}
+.inquiry_data{
+	width: 1100px;
+	margin:20px auto 20px;
+}
+.inquiry_data span{
+	margin-left: 30px;
+	font-size: 18px;
+}
+.inquiry_data input{
+	height: 20px;
+	line-height: 20px;
+	padding:3px;
+	outline: none;
+}
+select{
+	height: 28px;
+	width: 100px;
+	line-height: 28px;
+	font-size: 16px;
+}
+select option{
+	padding:5px;
+}
+
+.repair_main{
+	width: 1100px;
+	margin:20px auto 25px;
+	margin-top: 10px;
+	height: auto;
+	border:1px solid #d8d8d8;
+	border-radius: 5px;
+}
+.repair_tit{
+	padding: 10px;
+	height: 30px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.repair_tit span{
+	line-height: 30px;
+}
+.main_tit_word{
+	font-size: 23px;
+}
+.more a{
+	height: 20px;
+	line-height: 20px;
+	border:1px solid #5c307d;
+	color: #5c307d;
+	border-radius: 2px;
+	padding: 4px;
+	font-size: 15px;
+	float: right;
+	margin-left: 8px;
+}
+.con_tit{
+	width: 100%;
+}
+.con_tit th{
+	line-height: 36px;
+	color:#808080;
+	font-size: 15px; 
+	font-weight: normal;
+	border-bottom: 1px solid #d8d8d8;
+}
+.repair_infor tr{
+	width: 100%;
+}
+.repair_infor th{
+	line-height: 36px;
+	font-size: 18px;
+	font-weight: normal;
+	border-bottom: 1px solid #d8d8d8;
+}
+.repair_infor a{
+	color: #000;
+}
+.repair_infor a:hover{
+	color: #5c307d;
+	border-bottom: 1px solid #5c307d;
+}
+.main_sub_list{
+	height: 30px;
+	margin-left: 20px;
+}
+.main_sub_list a{
+	float: left;
+    margin: 0 5px;
+    width: 50px;
+    height: 30px;
+    margin-top:10px;
+    border: 1px solid #ebebeb;;
+    line-height: 30px;
+    background: #fff;
+    text-align: center;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+.main_sub_list a:hover{
+	color: #fff;
+	background-color: #5c307d
+}
+.main_sub_bottom{
+	font-size: 14px;
+}
+.footer{
+	position: relative;
+	height: 90px;
+	margin-top: 20px;
+	background-color: #3e2054;
+	padding-left: 80px;
+	padding-top: 30px;
+}
+.team_name{
+	display: block;
+}
+.team span{
+	color: #fff;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="/GuaranteeSystem/scripts/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/GuaranteeSystem/js/NoticeInform.js"></script>
+<body>
+	<table>
+		<tr>
+			<td>文件名称</td>
+			<td>文件上传日期</td>
+			<td>文件下载数</td>
+		</tr>
+		
+		<tbody id="content">
+		</tbody>
+		
+	</table>
+	<br>
+	共 <span id="totalRecord"></span> 条记录&nbsp;&nbsp;共 <span id="totalPage"></span> 页&nbsp;&nbsp;当前第 <span id="currentPage"></span> 页&nbsp;&nbsp;
+	<a href="#" onclick="firstPage();">首页</a>&nbsp;&nbsp;
+		<a href="#" onclick="previousPage();">上一页</a>&nbsp;&nbsp; 
+	<a href="#" onclick="nextPage();">下一页</a>&nbsp;&nbsp; 
+	<a href="#" onclick="lastPage();">尾页</a>
+</body>
+</html>

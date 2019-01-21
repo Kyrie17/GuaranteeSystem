@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>个人中心</title>
+	<script type="text/javascript" src="/GuaranteeSystem/scripts/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/GuaranteeSystem/js/person_finish_commit.js"></script>
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/person_commit.css">
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/iconfont/iconfont.css">
+	<script type="text/javascript" src="/GuaranteeSystem/js/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/sweetalert2.css">
+	<script type="text/javascript" src="/GuaranteeSystem/js/modifypassword.js"></script>
+	 <script type="text/javascript" src="/GuaranteeSystem/js/pingfen.js"></script>
+	 <script type="text/javascript" src="/GuaranteeSystem/js/GetCommidity.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="top">
+		<div class="card">
+			<div class="person_top">
+				<span class="return_index"><a href="/GuaranteeSystem/html/HomePage.html">返回首页</a></span>
+			</div>
+			<div class="header_wrapper">
+				<div class="header_wrapper_main">
+					<div>
+						<div class="person_pic">
+							<div class="pic">
+							<img src="/GuaranteeSystem/imgs/person.jpg" width="160px" height="160px">
+							</div>
+						</div>
+					</div>
+					<div class="person_tit">
+						<span>个人主页</span>
+					</div>
+					<div class="btn" id="person_introduce">
+						<span style="cursor: pointer;">编辑个人资料</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="person_main" id="person_main">
+		<div class="person_main_left">
+			<div class="left_tit">
+				<ul class="tablist">
+					<a href="/GuaranteeSystem/html/person.html" style="color: #000;"><li class="work">未完成</li></a>
+					<a href="/GuaranteeSystem/html/person_finish.html" style="color: #000;"><li class="work">已完成</li></a>
+					<a href="/GuaranteeSystem/html/person_finish_commit.html" style="color: #000;"><li class="work show">我要评价</li></a>
+				</ul>
+			</div>
+			<!--个人主页报修信息-->
+			<div class="trans">
+				<!--未审核-->
+				<div class="repair_main" style="margin-left: 5px;display: inline-block;">
+					<div class="box">	
+						<div class="repair_con">
+							<table cellpadding="0" cellspacing="0" width="100%">
+								<tbody class="con_tit">
+									<tr>
+										<th class="con_tit_perople">报修单号</th>
+										<th class="con_tit_type">报修类别</th>
+										<th class="con_tit_state">受理状态</th>
+										<th class="con_tit_time">报修时间</th>
+										<th class="con_tit_con">报修内容</th>										
+									</tr>
+								</tbody>
+								<tbody class="repair_infor" id="content"> 
+									<tr>
+										<th id="orderNumber" name="orderNumber"></th>
+										<th id="serType" name="serType"></th>
+										<th id="repair_state" name="repair_state"></th>
+										<th id="serTime" name="serTime"></th>
+										<th id="serInform" name="serInform" class="serInform"><a href="#" id="show_bill"></a></th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="main_sub_list">
+							<a href="#" onclick="firstPage();">首页</a>
+							<a href="#" onclick="previousPage();">上一页</a>
+							<a href="#" onclick="nextPage();">下一页</a>
+							<a href="#" onclick="lastPage();">尾页</a>
+						</div>
+						<p class="main_sub_bottom" style="text-align: right; margin-right: 5px;">
+						当前为 <span id="currentPage"></span> 页，共 
+							<span id="totalPage"></span> 页
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="person_main_right">
+			<div class="left_tit">
+				<div class="judge">
+					<div>
+						<span class="judge_tit">我的购物车<i class="iconfont icon-jiarugouwuche"></i></span>
+						<button type="button" id="delete" class="delete">清空购物车</button>
+					</div>
+				</div>
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tbody class="judge_con">
+						<tr>
+							<th class="name_tit">名称</th>
+							<th class="number_tit">数量</th>
+							<th class="price_tit">总价</th>
+							<th class="delete_tit"></th>
+					</tr>
+					</tbody>
+					<tbody class="commidity" id="commidity">
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="select_Reset" id="select_Reset" style="display: none;">
+		<div class="select_con">
+			<div class="">
+				<span id="close_btn_first" class="close_btn_first">X</span>
+			</div>
+			<div class="select_img">
+				<img src="/GuaranteeSystem/imgs/person_1.png" class="img1"  onMouseOver="this.src='/GuaranteeSystem/imgs/re_person.png'" onmouseout="this.src='/GuaranteeSystem/imgs/person_1.png'" id="img1" title="修改个人资料">
+				<img src="/GuaranteeSystem/imgs/code_1.png" class="img2" onMouseOver="this.src='/GuaranteeSystem/imgs/re_code.png'" onmouseout="this.src='/GuaranteeSystem/imgs/code_1.png'" id="img2" title="修改密码">
+			</div>
+		</div>
+</div>
+<div class="change_person" id="change_person" style="display:none;">
+	<form action="#" autocomplete="off">
+		<div class="change_con">
+			<div class="top_tit">
+				<form action="" method="post">
+						<div class="chane_tit">
+							<span class="tit">修改个人资料</span>
+							<span id="close_btn1" class="close_btn">X</span>
+						</div>
+						<div class="first_con">
+							<div class="name">
+								<span>学号：</span>
+								<input type="text" name="stu_id" class="stu_id" id="stu_id">
+							</div>
+							<div class="use_sex">
+								<span>性别：</span>
+								<input type="radio"  value="1" name="sex" checked>
+								<label><i class="iconfont icon-icon" style="font-size: 35px; color: #00BFFF;"></i></label>
+								<input type="radio" value="0" name="sex">
+								<label><i class="iconfont icon-nv1" style="font-size: 35px;color: 	#F08080;" ></i></label>
+							</div>
+							<div class="living">
+								<span>宿舍：</span>
+								<!--放宿舍的那些东西-->
+								<select name="area" class="area">
+								</select>
+								<select name="build" class="build">
+								</select>
+								<input type="text" id="room" name="room" class="room"><br>
+							</div>
+							<button value="提交"  type="button" name="Person_submit" id="Person_submit" class="Person_submit">提交</button>
+						</div>
+				</form>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="change_Code" id="change_Code" style="display: none">
+
+		<div class="change_con">
+			<div class="top_tit">
+					<div class="chane_tit">
+						<span class="tit">修改密码</span>
+						<span id="close_btn2" class="close_btn">X</span>
+					</div>
+					<div class="first_con">
+						<div class="code">
+							<div class="old">
+								<span>原密码：</span>
+								<input type="text" name="old_password" class="old_password" id="old_password">
+							</div>
+							<div class="new">
+								<span>新密码：</span>
+								<input type="password" name="new_password" class="new_password" id="new_password">
+							</div>
+							<div>
+								<span>再次输入密码：</span>
+								<input type="password" name="repeatPassword" class="repeatPassword" id="repeatPassword">
+							</div>
+						</div>
+						
+						<button value="提交" type="button" name="password_submit" id="password_submit" class="password_submit">提交</button>
+				</div>
+			</div>
+		</div>
+</div>
+<div class="open_repair" id="open_repair" style="display: none;">
+		<div class="repair_box">
+			<div class="repair_First">
+				<div class="repair_middle">
+					<table cellpadding="0" cellspacing="0" width="100%" id="" class="mytable">
+						<tbody>
+							<tr>
+								<td colspan="4" class="headline">申请信息</td>
+							</tr>
+							
+							<tr>
+								<td class="title" width="130px">序号</td>
+								<td colspan="" id="r_ordernumber" width="145px">1</td>
+								<td class="title">用户名</td>
+								<td colspan="2" id="s_id">燊欣</td>
+							</tr>
+							<tr>
+								<td class="title">电话</td>
+								<td id="s_phone">123232332</td>
+								<td class="title">报修类别</td>
+								<td id="r_sertype">电</td>
+							</tr>
+							<tr>
+								<td class="title">故障地址</td>
+								<td id="r_seradd">18A#999</td>
+								<td class="title">可接受维修时间</td>
+								<td id="r_sertime">2018.01.01</td>
+							</tr>
+							<tr>
+								<td class="title" colspan="1" width="100px">报修内容</td>
+								<td id="r_serinform" colspan="3" height="80px">教研室7个顶灯不亮酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷</td>
+							</tr>
+							<tr>
+								<td class="title">审核状态</td>
+								<td id="r_judgestate">已审核</td>
+								<td class="title">维修工</td>
+								<td id="a_id">冯灵聪</td>
+							</tr>
+							<tr>
+								<td class="title" colspan="1">图片</td>
+								<td id="r_filepath" colspan="3"><img src="/GuaranteeSystem/imgs/person.jpg" width="180px" height="200px" style="padding-top: 10px;"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="bill_btn">
+					<button value="我要评价" type="button" name="stu_comment" id="stu_comment" class="stu_comment">我要评价</button>
+					<button id="close_box" type="button" value="取消" class="close_box">取消</button>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="repair_bill" id="repair_bill" style="display: none;">
+		<div class="repair_need">
+			<div class="tab_con">
+				<div class="repair_tit">
+					<span class="tit">我要评价</span>
+					<span id="close_btn" class="close_btn">X</span>
+				</div>
+				<div class="first_con">
+					<span class="question" id="satisfied">
+						 您对本次报修满意吗？
+					</span>
+					<div class="select" style="margin-left: 20px;">
+						<div>
+							<input type="radio" name="radio"  id="score1" value="1"><span>不满意</span>
+						</div>
+						<div>
+							<input type="radio" name="radio"  id="score2" value="2"><span>一般</span>
+						</div>
+						<div>
+							<input type="radio" name="radio"  id="score3" value="3"><span>满意</span>
+						</div>
+					</div>
+				</div>
+				<div class="second_con">
+					<span class="suggest"  >您对我们有什么建议?</span>
+					<div class="print">
+						<textarea cols="30" style="width: 300px;height: 80px;outline: none;resize: none;" id="suggest"></textarea>
+					</div>
+					
+				</div>
+				<div id="pingfen" class="pingfen">
+				    <ul>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				    </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--评价表的弹框-->
+<script type="text/javascript">
+	var show_comment = document.getElementById('repair_bill');
+    // 打开弹窗的按钮对象
+    var drop = document.getElementById("stu_comment");
+    // 获取 <span> 元素，用于关闭弹窗
+    var close_comment = document.getElementById("close_btn");
+    drop.onclick = function() {
+        show_comment.style.display = "block";	
+        var oPf = document.getElementById('pingfen');
+        var aLi = oPf.getElementsByTagName('li');
+        var i = 0;
+        var a=document.getElementById("cc");
+
+        for (i = 0; i < aLi.length; i++) {
+        	 aLi[i].index = i;
+             aLi[i].style.background = "url(/GuaranteeSystem/imgs/star.gif) no-repeat 0 0px";
+             aLi[i].onmouseover = function () {
+                 for (i = 0; i < aLi.length; i++) {
+                     if (i <= this.index) {
+                         aLi[i].style.background = "url(/GuaranteeSystem/imgs/star.gif) no-repeat 0 -29px";
+                     }
+                     else {
+                         aLi[i].style.background = "url(/GuaranteeSystem/imgs/star.gif) no-repeat 0 0px";
+                     }
+                 }
+             };
+				
+             aLi[i].onmousedown = function () {
+             	var addressID = $("input[name='radio']:checked").val();
+             	var suggest=document.getElementById('suggest').innerHTML;
+             	var r_ordernumber=$("#r_ordernumber").text();
+             	var index=this.index + 1;
+     			var url = "/GuaranteeSystem/ScoreServlet";
+     			var args = {
+     			"addressID" : addressID,
+     			"suggest" : document.getElementById('suggest').value,
+     			"r_ordernumber" : document.getElementById("r_ordernumber").innerText,
+     			"index" : index,
+     			"s_id":document.getElementById("s_id").innerText,
+     			"a_id":document.getElementById("a_id").innerText
+     		};
+    		$.post(url, args, function(data) {
+    				if(data.msg=="添加成功"){
+    					swal("提示", "满意度提交成功!", "success");
+    				}else{
+    					swal("提示", "您已提交过满意度!", "warning");
+    				}
+    				var modal = document.getElementById('repair_bill');
+    					modal.style.display = "none";
+    				});
+
+            };
+        }
+    }
+     
+    close_comment.onclick = function() {
+        show_comment.style.display = "none";
+    }     
+    window.onclick = function(event) {
+        if (event.target == show_comment) {
+            show_comment.style.display = "none";
+        }
+    }
+</script>
+<script type="text/javascript">
+	var select_Reset = document.getElementById('select_Reset');
+    // 打开弹窗的按钮对象
+    var person_open = document.getElementById("person_introduce");
+    // 获取 <span> 元素，用于关闭弹窗
+    var span = document.getElementById("close_btn_first");
+    person_open.onclick = function() {
+        select_Reset.style.display = "block";
+    }
+     
+    span.onclick = function() {
+        select_Reset.style.display = "none";
+    }     
+    window.onclick = function(event) {
+        if (event.target == select_Reset) {
+            select_Reset.style.display = "none";
+        }
+    }
+</script>
+<script type="text/javascript">
+	var modal2 = document.getElementById('change_person');
+	
+    // 打开弹窗的按钮对象
+    var btn1 = document.getElementById("img1");
+    
+    // 获取 <span> 元素，用于关闭弹窗
+    var span = document.getElementById("close_btn1");
+    btn1.onclick = function() {
+        modal2.style.display = "block";
+    }
+    
+    span.onclick = function() {
+        modal2.style.display = "none";
+    }     
+   
+</script>
+<script type="text/javascript">
+	var re_code=document.getElementById('change_Code');
+	var change=document.getElementById('img2');
+	var span = document.getElementById("close_btn2");
+	change.onclick=function(){
+    	re_code.style.display="block";
+    }
+    span.onclick = function() {
+        re_code.style.display = "none";
+    }     
+   
+</script>
+</body>
+</html>

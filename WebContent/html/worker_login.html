@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+	<title>管理员登录</title>
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/manage_login.css">
+	<script language='javascript'  charset="utf-8" src='/GuaranteeSystem/scripts/jquery-3.3.1.min.js'></script>
+	<script type="text/javascript" src="/GuaranteeSystem/js/worker_login.js"></script>
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/sweetalert2.css">
+	<script type="text/javascript" src="/GuaranteeSystem/js/sweetalert.min.js"></script>
+</head>
+<body>
+<div class="manage_login">
+	<div class="login_header">
+	</div>
+	<div class="login_con">
+		<form action="" method="post" autocomplete="off">
+			<div class="login_input">
+				<div class="login_username">
+					<input type="text" name="username" id="username" class="username" placeholder="输入你的账号">
+					<img src="/GuaranteeSystem/imgs/denglu.png">
+					<span id="username_wrong" class="id_Wrong"></span>
+				</div>
+				<div class="login_password">
+					<input type="password" name="password" id="password" class="password" placeholder="输入你的密码">
+					<img src="/GuaranteeSystem/imgs/mima.png">
+					<span id="password_wrong" class="password_Wrong"></span>
+				</div>
+			</div>
+		</form>
+		<div class="login_btn">
+			<input type="button" name="login" class="login" id="worker_login" value="维修工登录">
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="team">
+		<span class="system" style="font-size: 20px;">广金报修系统</span>
+		<span class="team_name">队名：全都是bug队&copy;2018</span>
+	</div>
+</div>
+</body>
+</html>

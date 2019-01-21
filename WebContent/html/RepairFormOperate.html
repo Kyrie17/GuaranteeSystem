@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RepairFormOperate</title>
+</head>
+<script type="text/javascript" src="/GuaranteeSystem/scripts/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/GuaranteeSystem/js/RepairFormOperate.js"></script>
+<body>
+	<table>
+		<tr>
+			<td align="center" colspan="9">
+			<h2>所有报修单</h2></td>
+		</tr>
+		<tr>
+			<td>序号</td>
+			<td>学号</td>
+			<td>电话</td>
+			<td>报修类别</td>
+			<td>审核状态</td>
+			<td>维修工人</td>
+			<td colspan="3">操作</td>
+		</tr>
+		
+		<tbody id="content"></tbody>
+		
+	</table>
+	
+	<br>
+	共 <span id="totalRecord"></span> 条记录&nbsp;&nbsp;共 <span id="totalPage"></span> 页&nbsp;&nbsp;当前第 <span id="currentPage"></span> 页&nbsp;&nbsp;
+	<a href="#" onclick="firstPage();">首页</a>&nbsp;&nbsp; 
+	<a href="#" onclick="nextPage();">下一页</a>&nbsp;&nbsp; 
+	<a href="#" onclick="previousPage();">上一页</a>&nbsp;&nbsp;
+	<a href="#" onclick="lastPage();">尾页</a>
+</body>
+</html>

@@ -1,0 +1,89 @@
+.repair_bill{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	color: #5c307d;
+	font-weight: bold;
+	background-color:	rgb(136,136,136);
+}
+.tab_con{
+	width: 40%;
+	padding: 13px;
+	border:1px solid rgba(92,48,175,0.5);
+	border-radius: 20px;
+	margin: 10% auto;
+}
+#close_btn{
+	padding: 5px;
+	font-size: 20px;
+	border-left: :1px solid rgba(92,48,175,0.5);
+	float: right;
+	cursor: pointer;
+}
+.tit{
+	line-height: 35px;
+	font-size: 20px;
+}
+.repair_tit{
+	text-align: center;
+	background-color: #fff;	
+}
+.repair_con{
+	margin-top: 10px;
+	background-color: #fff;
+	border-top: 1px solid 	#888;
+}
+.repair_con span{
+	font-size:18px;
+	width: 100px;
+	height: 37px;
+}
+.repair_con input,textarea{
+    padding-left:25px;
+    color: rgba(92,48,175,1);
+    font-family: 正文黑体;
+    background-color: transparent;
+    border: none;
+    line-height: 37px;
+    font-size: 18px;
+    outline: none;
+}
+.repair_name,.type,.add,.repair_phone,.information{
+	border-bottom: 1px solid #5c307d;
+}
+.repair_con span{
+	padding-left:10px;
+	padding-bottom: 10px;
+	padding-top:5px;
+
+}
+.type:after{
+	content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #5c307d;
+    border-style: solid;
+    transform: matrix(.71,.71,-.71,.71,0,15);
+    position: absolute;
+}
+select{
+	-webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 70%;
+    padding-left: 20px;
+    font-size: inherit;
+    height: 39px;
+    line-height: 39px;
+    position: relative;
+    z-index: 1;
+}
+input[type="date"]::-webkit-inner-spin-button { visibility: hidden; }
+input[type="date"]::-webkit-clear-button{
+   display:none;
+}

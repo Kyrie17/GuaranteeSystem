@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>数据汇总</title>
+	<script type="text/javascript" src="/GuaranteeSystem/scripts/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/GuaranteeSystem/js/RepairForm.js"></script>
+	<script type="text/javascript" src="/GuaranteeSystem/js/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/sweetalert2.css">
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/manage_data_all.css">
+	<script type="text/javascript" src="/GuaranteeSystem/js/upLoadFile.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="top_logo"> 
+		<div class="subnav">
+				<ul class="top_tit">
+					<li><a href="/GuaranteeSystem/html/ManageOperate.html">首页</a></li>
+					<li><a href="/GuaranteeSystem/html/manage_index.html">维修队伍</a></li>
+					<li><a href="/GuaranteeSystem/html/manage_data_all.html">数据汇总</a></li>
+					<li><a href="/GuaranteeSystem/html/analyse_data.html">数据分析</a></li>
+					<li><a href="">维修统计</a></li>
+					<li class="file"><form id="form" enctype="multipart/form-data" action="" method="post"><input type="file" name="file" id="file" onchange="upLoad()">文件上传</form></li>
+				</ul>
+		</div>
+	</div>
+	<div class="main_con">
+		<div class="main_tit">
+			<span class="main_tit_word">报修信息</span>
+			<span class="main_tit_word" style="color: #ccc;font-size: 20px;">/REPAIR INFORMATION</span>
+		</div>
+		<form action="" id="repairForm" method="post" autocomplete="off">
+			<div class="inquiry_data">
+				<span>姓名：</span>
+				<input type="text" name="username" id="username">
+				<span>报修类别：</span>
+				<select name="serType" id="serType">
+					<option value="1">水</option>
+					<option value="2">木</option>
+					<option value="3">电</option>
+					<option value="4">其他</option>
+					<option value="0" selected>全部</option>
+				</select>
+				<span>报修状态</span>
+				<select name="judgeState" id="judgeState">
+					<option value="-1">未审核</option>
+					<option value="1">已审核</option>
+					<option value="2">已完成</option>
+					<option value="0" selected>全部</option>
+				</select>
+				<img src="/GuaranteeSystem/imgs/chaxun.png" style="width: 40px;height: 40px;margin-left: 25px;cursor: pointer;position: relative;top:10px;" onclick="Filter();"> 
+			</div>
+		</form>
+		<div class="repair_main">
+			<div class="repair_tit">
+				<span class="main_tit_word">维修数据</span>
+			</div>
+			<div class="repair_con">
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tbody class="con_tit">
+						<tr>
+							<th>报修人</th>
+							<th>联系电话</th>
+							<th>报修类型</th>
+							<th>报修信息</th>
+							<th>可维修时间</th>
+							<th>住址</th>
+							<th>报修状态</th>
+						</tr>
+					</tbody>
+					<tbody class="repair_infor" id="content"> 
+						
+					</tbody>
+				</table>
+			</div>
+			<div class="main_sub_list">
+				<a href="#" onclick="firstPage();">首页</a>
+				<a href="#" onclick="previousPage();">上一页</a>
+				<a href="#" onclick="nextPage();">下一页</a>
+				<a href="#" onclick="lastPage();">尾页</a>
+			</div>
+			<p class="main_sub_bottom" style="text-align: right;padding-right:5px;">
+				当前为 <span id="currentPage"></span> 页，共
+				 <span id="totalPage"></span> 页
+			</p>
+		</div>
+	</div>
+</div>
+<div class="footer">
+		<div class="team">
+			<span class="system" style="font-size: 20px;">广金报修系统</span>
+			<span class="team_name">队名：全都是bug队&copy;2018</span>
+		</div>
+</div> 
+</body>
+</html>

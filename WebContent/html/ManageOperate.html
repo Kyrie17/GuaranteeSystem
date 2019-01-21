@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>管理端首页派工</title>
+	<script type="text/javascript" src="/GuaranteeSystem/js/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/sweetalert2.css">
+	<script type="text/javascript" src="/GuaranteeSystem/scripts/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/GuaranteeSystem/js/RepairFormOperate.js"></script>
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/manage_useworker.css">
+	<script type="text/javascript" src="/GuaranteeSystem/js/upLoadFile.js"></script>
+
+</head>
+
+
+<body>
+<div class="wrapper">
+	<div class="top_logo"> 
+		<div class="subnav">
+			<ul class="top_tit">
+				<li><a href="/GuaranteeSystem/html/ManageOperate.html">首页</a></li>
+				<li><a href="/GuaranteeSystem/html/manage_index.html">维修队伍</a></li>
+				<li><a href="/GuaranteeSystem/html/manage_data_all.html">数据汇总</a></li>
+				<li><a href="/GuaranteeSystem/html/analyse_data.html">数据分析</a></li>
+				<li><a href="">维修统计</a></li>
+				<li class="file"><form id="form" enctype="multipart/form-data" action="" method="post"><input type="file" name="file" id="file" onchange="upLoad()">文件上传</form></li>
+			</ul>
+		</div>
+	</div>
+	<div class="main">
+		<div class="repair_main">
+			<div class="repair_tit">
+				<span class="main_tit_word">维修数据</span>
+			</div>
+			<div class="repair_con">
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tbody class="con_tit">
+						<tr>
+							<th class="xuhao">序号</th>
+							<th class="xuehao">学号</th>
+							<th class="dianhua">电话</th>
+							<th class="leibie">报修类别</th>
+							<th><span class="shenhe">审核状态</span><span class="weixiu">维修工人</span><span class="gengxin">更新</span></th>
+							<th class="shanchu">删除</th>
+							<th class="xiangxi">详细</th>
+						</tr>
+					</tbody>
+					<tbody class="repair_infor" id="content"> 
+						
+						
+						
+					</tbody>
+				</table>
+			</div>
+			<div class="main_sub_list">
+				<a href="#" onclick="firstPage();">首页</a>
+				<a href="#" onclick="previousPage();">上一页</a>
+				<a href="#" onclick="nextPage();">下一页</a>&nbsp;&nbsp; 
+				<a href="#" onclick="lastPage();">尾页</a>
+			</div>
+			<p class="main_sub_bottom" style="text-align: right;padding-right:5px;">
+				当前为 <span id="currentPage"></span> 页，共 
+				<span id="totalPage"></span> 页
+			</p>
+		</div>
+	</div>
+	<div class="worker_box" title="点我找客服" id="worker_box">
+		<a href="/GuaranteeSystem/html/chat_Room.html"><img src="/GuaranteeSystem/imgs/chat_people.png"></a>
+	</div>
+</div>
+
+</body>
+</html>

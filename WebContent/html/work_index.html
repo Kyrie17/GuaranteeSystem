@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>学生评价</title>
+	<script type="text/javascript" src="/GuaranteeSystem/scripts/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/GuaranteeSystem/js/work_index.js"></script>
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/work_index.css">
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/iconfont/iconfont.css">
+	<script type="text/javascript" src="/GuaranteeSystem/js/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/GuaranteeSystem/css/sweetalert2.css">
+</head>
+<body>
+<div class="work_con">
+	<div class="con_top"></div>
+	<div class="work_main">
+		<div class="work_left">
+			<div class="work_main_left">
+				<ul>
+					<a href="/GuaranteeSystem/html/work_index.html"><li class="stu_repair  show">学生报修单</li></a>
+					<a href="/GuaranteeSystem/html/work_suggest.html"><li class="stu_suggest">学生评价</li></a>
+				</ul>
+			</div>
+
+		</div>
+		<div class="work_right">
+			<div class="work_right_top">
+				<span class="stu_bill"><i class="iconfont icon-baoxiudan" style="font-size: 30px;"></i></span>
+				<span class="stu_bill">学生报修单</span>
+			</div>
+			<div class="work_right_main">
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tbody class="con_tit">
+						<tr>
+							<th class="con_tit_perople">报修宿舍</th>
+							<th class="con_tit_time">报修时间</th>
+							<th class="con_tit_con">报修内容</th>
+							<th class="con_tit_scan"></th>	
+							<th class="con_tit_change"></th>						
+						</tr>
+					</tbody>
+					<tbody class="repair_infor" id="content"> 
+							<tr>
+								<th id="serAdd" name="serAdd"></th>
+								<th id="serTime" name="serTime"></th>
+								<th id="serInform" name="serInform" class="serInform"></th>
+								<th class="change" title="点击改变状态"><button title="点击改变状态" onclick="changeJudgeState()"></button></th>
+								<th class="con_tit_scan" id="con_tit_scan" onclick="ShowStudentBill()"></th>
+							</tr>
+					</tbody>
+					</table>
+					<div class="main_sub_list">
+							<a href="#" onclick="firstPage();">首页</a>
+							<a href="#" onclick="previousPage();">上一页</a>
+							<a href="#" onclick="nextPage();">下一页</a>
+							<a href="#" onclick="lastPage();">尾页</a>
+						</div>
+						<p class="main_sub_bottom" style="text-align: right; margin-right: 5px;">
+						当前为<span id="currentPage"></span>页，共
+							<span id="totalPage"></span>页
+						</p>
+				</div>
+				<!--报修单弹框-->
+				<div class="repair_stu_bill">
+					<div class="open_repair" id="open_repair" style="display: none;">
+						<div class="repair_box">
+							<div class="repair_First">
+								<div class="repair_middle">
+									<table cellpadding="0" cellspacing="0" width="100%" id="" class="mytable">
+										<tbody>
+											<tr>
+												<td colspan="4" class="headline">申请信息</td>
+											</tr>
+											
+											<tr>
+												<td class="title">用户名</td>
+												<td id="s_id">燊欣</td>
+												<td class="title">电话</td>
+												<td id="s_phone">123232332</td>
+											</tr>
+											<tr>
+												<td class="title">故障地址</td>
+												<td id="r_seradd">18A#999</td>
+												<td class="title">维修工</td>
+												<td id="a_id">冯灵聪</td>
+											</tr>
+											<tr>
+												<td class="title">可接受维修时间</td>
+												<td id="r_sertime" colspan="3">2018.01.01</td>
+											</tr>
+											<tr>
+												<td class="title" colspan="1" width="100px">报修内容</td>
+												<td id="r_serinform" colspan="3" height="80px">教研室7个顶灯不亮酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷酷</td>
+											</tr>
+											
+											<tr>
+												<td class="title" colspan="1">图片</td>
+												<td id="r_filepath" colspan="3"><img src="/GuaranteeSystem/imgs/person.jpg" width="180px" height="200px" style="padding-top: 10px;"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="bill_btn">
+									<button name="change_repair" id="change_repair" class="change_repair" onclick="changeJudgeState1()" title="点击改变状态">未审核</button>
+									<button value="取消" name="comfirm" id="comfirm" class="finish_repair">取消</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
